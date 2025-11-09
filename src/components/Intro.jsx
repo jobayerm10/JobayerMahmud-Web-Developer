@@ -37,13 +37,17 @@ const Intro = () => {
           <a
             target="_blank"
             href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume/Jobayer-Mahmud-Resume.pdf"
-            className=" px-4 py-2 rounded-md text-white font-semibold bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 hover:scale-105  transition-all duration-300"
+            className=" px-4 py-2 rounded-md text-white font-semibold bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 hover:scale-105  transition-all duration-100"
           >
             Resume
           </a>
-          <button className=" px-4 py-2 rounded-md text-white font-semibold bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 curosor-pointer hover:scale-105  transition-all duration-300">
+          <a
+            href="mailto:jobayermahmud976@gmail.com"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-md text-white font-semibold bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 hover:scale-105  transition-all duration-100"
+          >
             Contact Me
-          </button>
+          </a>
         </div>
       </div>
     </div>
