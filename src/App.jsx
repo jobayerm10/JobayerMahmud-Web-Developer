@@ -2,6 +2,7 @@ import AboutMe from "./components/AboutMe";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         >
           <Services></Services>
         </section>
+        <Skills></Skills>
       </main>
 
       <footer></footer>
