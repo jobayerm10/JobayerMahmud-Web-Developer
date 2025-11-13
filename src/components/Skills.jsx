@@ -14,7 +14,7 @@ const Skills = () => {
 
       <div className="max-w-[1420px] m-auto pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-4 sm:px-6 lg:px-0">
-          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl">
+          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#34d399] transform transition duration-300 hover:scale-105 shadow-md">
             <div className="flex items-center gap-2 mb-2">
               <img src="" alt="" />
               <h3 className="text-lg sm:text-xl font-bold text-white">HTML5</h3>
@@ -34,7 +34,7 @@ const Skills = () => {
               </span>
             </div>
           </div>
-          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl">
+          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#34d399] transform transition duration-300 hover:scale-105 shadow-md">
             <div className="flex items-center gap-2 mb-2">
               <img src="" alt="" />
               <h3 className="text-lg sm:text-xl font-bold text-white">CSS3</h3>
@@ -54,7 +54,7 @@ const Skills = () => {
               </span>
             </div>
           </div>
-          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl">
+          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#34d399] transform transition duration-300 hover:scale-105 shadow-md">
             <div className="flex items-center gap-2 mb-2">
               <img src="" alt="" />
               <h3 className="text-lg sm:text-xl font-bold text-white">
@@ -76,7 +76,7 @@ const Skills = () => {
               </span>
             </div>
           </div>
-          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl">
+          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#34d399] transform transition duration-300 hover:scale-105 shadow-md">
             <div className="flex items-center gap-2 mb-2">
               <img src="" alt="" />
               <h3 className="text-lg sm:text-xl font-bold text-white">
@@ -98,7 +98,7 @@ const Skills = () => {
               </span>
             </div>
           </div>
-          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl">
+          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#34d399] transform transition duration-300 hover:scale-105 shadow-md">
             <div className="flex items-center gap-2 mb-2">
               <img src="" alt="" />
               <h3 className="text-lg sm:text-xl font-bold text-white">
@@ -120,7 +120,7 @@ const Skills = () => {
               </span>
             </div>
           </div>
-          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl">
+          <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#34d399] transform transition duration-300 hover:scale-105 shadow-md">
             <div className="flex items-center gap-2 mb-2">
               <img src="" alt="" />
               <h3 className="text-lg sm:text-xl font-bold text-white">
