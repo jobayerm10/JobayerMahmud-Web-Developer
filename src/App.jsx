@@ -1,4 +1,5 @@
 import AboutMe from "./components/AboutMe";
+import Education from "./components/Education";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
@@ -27,6 +28,12 @@ function App() {
           <Services></Services>
         </section>
         <Skills></Skills>
+        <section
+          id="education"
+          className="py-16 bg-linear-to-br from-[#0a0f1f] via-[#1a103d] to-[#0a0a0a] text-white"
+        >
+          <Education></Education>
+        </section>
       </main>
 
       <footer></footer>
