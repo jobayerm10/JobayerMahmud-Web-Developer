@@ -1,6 +1,7 @@
 import AboutMe from "./components/AboutMe";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -17,6 +18,13 @@ function App() {
           <Intro></Intro>
         </section>
         <AboutMe></AboutMe>
+
+        <section
+          id="section"
+          className="py-20 bg-linear-to-br from-[#1e293b] via-[#0f172a] to-[#1e293b] text-white border-t border-gray-700"
+        >
+          <Services></Services>
+        </section>
       </main>
 
       <footer></footer>
