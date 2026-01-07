@@ -7,12 +7,12 @@ import Skills from "../components/Skills";
 
 const Home = () => {
   return (
-    <div className="bg-(--text-bg)">
+    <div className="bg-(--text-bg) ">
       <header>
         <Navbar></Navbar>
       </header>
 
-      <section className="min-h-screen flex items-center py-10 sm:py-16">
+      <section>
         <Intro></Intro>
       </section>
     </div>
