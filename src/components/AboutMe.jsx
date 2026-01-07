@@ -3,10 +3,7 @@ import IntroGif from "./IntroGif";
 
 const AboutMe = () => {
   return (
-    <div
-      id="about"
-      className="pt-20 pb-20 bg-linear-to-r from-[#141e34] via-[#121c33] to-[#0f172a] text-white"
-    >
+    <div id="about" className="pt-20 pb-20 text-white">
       <div className="max-w-[1420px] m-auto undefined">
         <div className="text-center max-w-2xl mx-auto px-4 max-md:px-3">
           <h3 className="text-3xl font-bold mb-4 max-md:text-2xl">

@@ -1,76 +1,44 @@
-import { Typewriter } from "react-simple-typewriter";
-import Image from "../assets/heroimg.png";
-const Intro = () => {
+import image from "../assets/heroImg1.png";
+
+const Hero = () => {
   return (
-    <div className="w-full px-4 sm:px-8 md:px-12 lg:px-20">
-      <div className="flex items-center flex-col-reverse lg:flex-row lg:items-center justify-between gap-10">
-        <div className="text-center lg:text-left text-white w-full lg:w-1/2">
-          <h1 className="text-[28px] sm:text-[36px] md:text-[50px] lg:text-[60px] font-bold leading-tight mb-4">
-            Hi I'm <span className="text-purple-600">JOBAYER MAHMUD</span>
+    <section className="w-full  flex flex-col items-center justify-center mt-20 px-4 md:px-0 relative overflow-hidden">
+      <h3 className="lg:text-[1.5vw] md:text-[10vw] text-(--text-color) mb-2 ">
+        👋, My name is Jobayer and I am an aspiring
+      </h3>
+      <img className="relative z-10" src={image} alt="" />
+
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative">
+          <h1 className="text-(--text-color) sm:text-[17vw] md:text-[20vw] lg:text-[14vw] font-[font3] uppercase leading-none">
+            Web Developer
           </h1>
 
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-6 typewriter">
-            <span className="">
-              <Typewriter
-                words={["Frontend Developer."]}
-                loop={1}
-                cursor={true}
-                typeSpeed={100}
-              />
-            </span>{" "}
-          </h2>
-
-          <p className=" text-sm sm:text-base md:text-lg text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 ">
-            A Educator and a Tech enthusiast. I am always looking for new
-            opportunities to learn and grow.💗
+          <p className="absolute bottom-0 right-0 translate-y-full text-[1.2vw] text-(--text-color)">
+            Based in Rajshahi,Bangladesh.
           </p>
-          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-2">
-            <a
-              href="mailto:jobayermahmud976@gmail.com"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 
-    py-3 px-6 rounded-full font-fahim font-medium text-sm sm:text-base
-    bg-white text-[#121212] border-2 border-[#141e34]
-    transition-all duration-300
-    hover:bg-[#141e34] 
-    hover:text-white 
-    hover:border-cyan-400 
-    hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] undefined"
-            >
-              Contact Me
-            </a>
-            <a
-              target="_blank"
-              href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume/Jobayer-Mahmud-Resume.pdf"
-              className=" flex items-center justify-center gap-2 
-    py-3 px-6 rounded-full font-fahim font-medium text-sm sm:text-base
-    bg-white text-[#121212] border-2 border-[#141e34]
-    transition-all duration-300
-    hover:bg-[#141e34] 
-    hover:text-white 
-    hover:border-cyan-400 
-    hover:shadow-[0_0_10px_2px_rgba(0,255,255,0.8)] undefined"
-            >
-              Download Resume
-            </a>
-          </div>
-        </div>
-
-        <div class="flex-1 flex justify-center items-center mt-8 lg:mt-0  ">
-          <div className="relative group w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px]">
-            <div className="absolute -inset-2 rounded-full bg-linear-to-r from-purple-500 via-pink-500 to-indigo-500 animate-spin-slow"></div>
-            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-[0_0_50px_rgba(124,58,237,0.6)] group-hover:scale-105 transition duration-500">
-              <img
-                className="w-full h-full object-cover object-[center_15%]"
-                src={Image}
-                alt="JOBAYER MAHMUD"
-              />
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+
+      <div className="flex gap-4 mt-5 ">
+        <a
+          href="mailto:jobayermahmud976@gmail.com"
+          className="text-xl px-5 py-5 font-medium border rounded-md bg-[#2b2a2a] hover:bg-[#1B1B1B] text-white hover:scale-110 hover:-translate-y-1
+                   transition-all duration-200 ease-in-out shadow-md hover:shadow-lg"
+        >
+          You need a developer
+        </a>
+
+        <a
+          target="_blank"
+          href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume/Jobayer-Mahmud-Resume.pdf"
+          className="text-xl px-8 py-5 font-medium border rounded-md bg-gray-200 transition-all hover:bg-gray-300 text-[#3d3d3d] hover:scale-110 hover:-translate-y-1"
+        >
+          Resume
+        </a>
+      </div>
+    </section>
   );
 };
 
-export default Intro;
+export default Hero;

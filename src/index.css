@@ -2,7 +2,25 @@
 
 @import "tailwindcss";
 body {
-  background-color: rgb(34, 33, 33);
   font-family: "Roboto Mono", monospace;
-  color: #fff;
+}
+
+:root {
+  --text-color: #1b1b19;
+  --text-bg: #ffffff;
+}
+
+@font-face {
+  font-family: font1;
+  src: url(../public/fonts/61dda8782d6530778e4343c5_mediasanssemicondensed-bold-TRIAL.otf);
+}
+@font-face {
+  font-family: font2;
+  src: url(../public/fonts/624325ea630c625303e9b1f9_Media\ Sans\ SemiCondensed\ -\ Extended.ttf);
+}
+@font-face {
+  font-family: font3;
+  src: url(../public/fonts/Magz.otf);
+  font-weight: normal;
+  font-style: normal;
 }
