@@ -1,8 +1,9 @@
+import { NavLink } from "react-router-dom";
 import image from "../assets/heroImg1.png";
 
-const Hero = () => {
+const Intro = () => {
   return (
-    <section className="w-full  flex flex-col items-center justify-center mt-20 px-4 md:px-0 relative overflow-hidden">
+    <section className="w-full  flex flex-col items-center justify-center px-4 md:px-0 relative overflow-hidden">
       <h3 className="lg:text-[1.5vw] md:text-[10vw] text-(--text-color) mb-2 ">
         👋, My name is Jobayer and I am an aspiring
       </h3>
@@ -21,24 +22,23 @@ const Hero = () => {
       </div>
 
       <div className="flex gap-4 mt-5 ">
-        <a
-          href="mailto:jobayermahmud976@gmail.com"
-          className="text-xl px-5 py-5 font-medium border rounded-md bg-[#2b2a2a] hover:bg-[#1B1B1B] text-white hover:scale-110 hover:-translate-y-1
-                   transition-all duration-200 ease-in-out shadow-md hover:shadow-lg"
+        <NavLink
+          className="text-xl px-5 py-3  border rounded-md bg-(--text-color)  text-white  transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg"
+          to="/services"
         >
           You need a developer
-        </a>
-
+        </NavLink>
         <a
           target="_blank"
-          href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume/Jobayer-Mahmud-Resume.pdf"
-          className="text-xl px-8 py-5 font-medium border rounded-md bg-gray-200 transition-all hover:bg-gray-300 text-[#3d3d3d] hover:scale-110 hover:-translate-y-1"
+          href="mailto:jobayermahmud976@gmail.com"
+          className="text-xl px-5 py-3 font-medium border-2 rounded-md bg-(--bg-color) text-(--text-color)  transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg
+     "
         >
-          Resume
+          Wanna Talk With Me
         </a>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default Intro;
