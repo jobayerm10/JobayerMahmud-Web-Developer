@@ -2,18 +2,15 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="py-10 text-white">
-      <div className="text-center max-w-2xl mx-auto px-4">
-        <h3 className="text-5xl font-bold mb-4">
-          My <span className="text-purple-600">Skills</span>
-        </h3>
-        <p className="text-sm sm:text-[16px] text-gray-300">
-          The frontend tools and technologies I work with.
-        </p>
+    <div className="">
+      <div className="sunmmery mt-[10vw] mx-10">
+        <h1 className=" text-[3.5vw] font-[font1]">
+          The Frontend Tools I work with
+        </h1>
       </div>
 
-      <div className="max-w-[1420px] m-auto pb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-4 sm:px-6 lg:px-0">
+      <div className="max-w-[30%] mx-10 pb-10">
+        <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-1 gap-6 mt-8 px-4 sm:px-6 lg:px-0">
           <div className="p-5 sm:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#34d399] transform transition duration-300 hover:scale-105 shadow-md">
             <div className="flex items-center gap-2 mb-2">
               <img src="" alt="" />

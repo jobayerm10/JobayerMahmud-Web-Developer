@@ -3,13 +3,14 @@
 @import "tailwindcss";
 body {
   font-family: "Roboto Mono", monospace;
+  /* background-color: #ece7e1; */
 }
 html {
   scrollbar-width: none;
 }
 :root {
   --text-color: #1b1b19;
-  --text-bg: #ffffff;
+  --text-bg: #ffffff; /*#ECE7E1*/
 }
 
 @font-face {
