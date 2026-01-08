@@ -9,9 +9,9 @@ import Skills from "../components/Skills";
 const Home = () => {
   return (
     <div className="bg-(--text-bg) ">
-      <header>
+      {/* <header>
         <Navbar></Navbar>
-      </header>
+      </header> */}
 
       <section>
         <Intro></Intro>
