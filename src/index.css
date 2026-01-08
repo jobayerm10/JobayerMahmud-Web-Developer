@@ -4,7 +4,9 @@
 body {
   font-family: "Roboto Mono", monospace;
 }
-
+html {
+  scrollbar-width: none;
+}
 :root {
   --text-color: #1b1b19;
   --text-bg: #ffffff;
