@@ -16,10 +16,10 @@ const Home = () => {
       <section>
         <Intro></Intro>
       </section>
-
+      {/* 
       <section>
         <Projects></Projects>
-      </section>
+      </section> */}
     </div>
   );
 };
