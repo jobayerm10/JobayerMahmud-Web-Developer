@@ -22,6 +22,48 @@ const Projects = () => {
       image1: Image5,
       image2: Image6,
     },
+    {
+      image1: Image1,
+      image2: Image2,
+    },
+
+    {
+      image1: Image3,
+      image2: Image4,
+    },
+
+    {
+      image1: Image5,
+      image2: Image6,
+    },
+    {
+      image1: Image1,
+      image2: Image2,
+    },
+
+    {
+      image1: Image3,
+      image2: Image4,
+    },
+
+    {
+      image1: Image5,
+      image2: Image6,
+    },
+    {
+      image1: Image1,
+      image2: Image2,
+    },
+
+    {
+      image1: Image3,
+      image2: Image4,
+    },
+
+    {
+      image1: Image5,
+      image2: Image6,
+    },
   ];
   // gsap.registerPlugin(ScrollTrigger);
   // useGSAP(() => {

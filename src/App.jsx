@@ -1,4 +1,7 @@
 import { Route, Routes } from "react-router-dom";
+import LocomotiveScroll from "locomotive-scroll";
+
+const locomotiveScroll = new LocomotiveScroll();
 
 import Home from "./pages/Home";
 import AboutMe from "./components/AboutMe";
