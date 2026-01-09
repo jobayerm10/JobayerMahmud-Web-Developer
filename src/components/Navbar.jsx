@@ -31,13 +31,11 @@ const Navbar = () => {
               </li>
               <a
                 target="_blank"
-                href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume/Jobayer-Mahmud-Resume.pdf"
-                className="text-[.9vw] px-8 py-3 border rounded-md bg-(--text-color) text-(--text-bg)
-    transition-all duration-200 ease-out
-     hover:px-12 
+                href="mailto:jobayermahmud976@gmail.com"
+                className="text-[0.9vw] px-5 py-3  border-2 rounded-md bg-(--text-color) text-(--text-bg) transition-all duration-300 ease-out hover:px-9 shadow-md hover:shadow-lg
      "
               >
-                Resume
+                @jobayer
               </a>
             </ul>
           </nav>

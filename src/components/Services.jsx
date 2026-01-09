@@ -10,7 +10,7 @@ const Services = () => {
           </h5>
           <h5 className="text-[#FDA228] tracking-[0.4em]">& UI Enthusiast</h5>
         </div>
-        <p className="text-center text-[4.2vw] font-[font1]">
+        <p className="text-center text-[4.2vw] font-[font2]">
           Impactful branding and high-end <br /> productive websites for
           creatives.
         </p>

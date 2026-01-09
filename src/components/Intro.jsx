@@ -36,11 +36,13 @@ const Intro = () => {
         </NavLink>
         <a
           target="_blank"
-          href="mailto:jobayermahmud976@gmail.com"
-          className="text-[.9vw] px-5 py-3 font-medium border-2 rounded-md bg-(--bg-color) text-(--text-color)  transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg
+          href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume/Jobayer-Mahmud-Resume.pdf"
+          className="text-[.9vw] px-8 py-3 border rounded-md bg-(--bg-color) text-(--text-color)
+    transition-all duration-200 ease-out
+     hover:px-12 
      "
         >
-          Wanna Talk With Me
+          Resume
         </a>
       </div>
     </section>
