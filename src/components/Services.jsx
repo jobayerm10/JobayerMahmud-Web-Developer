@@ -1,4 +1,4 @@
-import React from "react";
+import ImageCard from "./ImageCard";
 
 const Services = () => {
   return (
@@ -23,6 +23,11 @@ const Services = () => {
           >
             Let's start a project together
           </a>
+        </div>
+      </div>
+      <div className="projects ">
+        <div className="card  h-[15vw]">
+          <ImageCard></ImageCard>
         </div>
       </div>
     </div>
