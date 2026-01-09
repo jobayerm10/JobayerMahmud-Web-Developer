@@ -7,7 +7,13 @@ const Intro = () => {
       <h3 className="lg:text-[1.5vw] -mb-5 md:text-[10vw] text-(--text-color) ">
         👋, My name is Jobayer and I am an aspiring
       </h3>
-      <img className="relative z-10" src={image} alt="" />
+      <img
+        className="relative z-10   w-[80vw] md:w-[65vw] lg:w-[24vw]
+    h-auto
+    max-w-full"
+        src={image}
+        alt=""
+      />
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="relative">
