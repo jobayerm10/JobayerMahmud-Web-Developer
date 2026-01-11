@@ -1,3 +1,4 @@
+import { Footer } from "./Footer";
 import ImageCard from "./ImageCard";
 import ClientPriority from "./ServicesParts/ClientPriority";
 
@@ -32,6 +33,7 @@ const Services = () => {
       <div className=" flex-1 ">
         <ClientPriority></ClientPriority>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

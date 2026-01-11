@@ -15,9 +15,11 @@ const ClientPriority = () => {
           website and a sale.
           <br />
           <br />
-          As a Web developer, I create custom web solutions that solve real
-          business problems, strengthen your online visibility, and drive
-          measurable growth.
+          As a Web developer, I create custom web solutions that{" "}
+          <span className="font-semibold">
+            solve real business problems, strengthen your online visibility, and
+            drive measurable growth.
+          </span>
         </p>
       </div>
     </div>
