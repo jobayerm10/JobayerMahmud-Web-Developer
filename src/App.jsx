@@ -24,7 +24,6 @@ function App() {
           <Route path="/education" element={<Education />} />
         </Route>
       </Routes>
-      ;
     </div>
   );
 }

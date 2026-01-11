@@ -1,6 +1,6 @@
 const ClientPriority = () => {
   return (
-    <div className="flex justify-center px-[10vw] py-[10vw]">
+    <div className="flex items-center justify-center h-[50vw]">
       <div className="text-left max-w-3xl">
         <h1 className="relative inline-block text-4xl font-[font1]">
           You need a website.
