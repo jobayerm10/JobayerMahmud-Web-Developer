@@ -29,7 +29,7 @@ const Services = () => {
       <div className="projects h-[20vw]flex-2 mt-20 flex items-center justify-center">
         <ImageCard></ImageCard>
       </div>
-      <div className=" flex-1 mt-10">
+      <div className=" flex-1 ">
         <ClientPriority></ClientPriority>
       </div>
     </div>
