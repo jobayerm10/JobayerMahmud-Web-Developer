@@ -13,7 +13,7 @@ const Navbar = () => {
           </NavLink>
 
           <nav>
-            <ul className="flex items-center gap-17">
+            <ul className="flex items-center gap-13">
               <li className="relative text-(--text-color) text-[0.9vw] transition-transform duration-300 ease-out hover:-translate-y-1 cursor-pointer">
                 <NavLink to="/">Home</NavLink>
               </li>

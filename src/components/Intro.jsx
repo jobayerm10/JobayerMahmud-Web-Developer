@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import image from "../assets/heroImg2.png";
+import image from "../assets/heroImg3.png";
 
 const Intro = () => {
   return (
