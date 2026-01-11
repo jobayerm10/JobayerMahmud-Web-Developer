@@ -20,7 +20,7 @@ const Services = () => {
           <a
             target="_blank"
             href=""
-            className="  text-[.9vw] px-5 py-3  border-2 rounded-md bg-(--bg-color) text-(--text-color)  transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg
+            className="  text-[.9vw] mt-5 px-5 py-3  border-2 rounded-md bg-(--bg-color) text-(--text-color)  transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg
      "
           >
             Let's start a project together

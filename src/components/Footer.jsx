@@ -33,7 +33,7 @@ export const Footer = () => {
         <a
           target="_blank"
           href="mailto:jobayermahmud976@gmail.com"
-          className="text-[0.9vw] px-5 py-3  hover:border-2 rounded-md bg-(--text-color) text-(--text-bg) transition-all duration-300 ease-out hover:px-9 shadow-md hover:shadow-lg
+          className="text-[0.9vw] px-5 py-3  hover:border-2 rounded-full bg-(--text-color) text-(--text-bg) transition-all duration-300 ease-out hover:px-9 shadow-md hover:shadow-lg
      "
         >
           @jobayer

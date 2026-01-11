@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <section className="w-full  flex flex-col items-center justify-center mt-30 px-4 md:px-0 relative overflow-hidden">
       <h3 className="lg:text-[1.5vw] -mb-5 md:text-[10vw] text-(--text-color) ">
-        👋, My name is Jobayer and I am an aspiring
+        👋, My name is Jobayer and I am a{" "}
       </h3>
       <img
         className="relative z-10   w-[80vw] md:w-[65vw] lg:w-[24vw]
