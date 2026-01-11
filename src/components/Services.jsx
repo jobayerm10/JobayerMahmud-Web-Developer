@@ -3,7 +3,7 @@ import ClientPriority from "./ServicesParts/ClientPriority";
 
 const Services = () => {
   return (
-    <div className="bg-red-500 min-h-screen flex flex-col ">
+    <div className="min-h-screen flex flex-col ">
       <div className=" mt-[10vw] mx-auto max-w-[70vw]">
         <div className="uppercase flex items-center justify-center gap-[2vw]  ">
           <h5 className="text-[#FDA228] tracking-[0.4em]">
@@ -29,7 +29,7 @@ const Services = () => {
       <div className="projects h-[20vw]flex-2 mt-20 flex items-center justify-center">
         <ImageCard></ImageCard>
       </div>
-      <div className="bg-blue-500 flex-1 mt-10">
+      <div className=" flex-1 mt-10">
         <ClientPriority></ClientPriority>
       </div>
     </div>
