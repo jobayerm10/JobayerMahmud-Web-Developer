@@ -3,47 +3,55 @@ import image from "../assets/heroImg3.png";
 
 const Intro = () => {
   return (
-    <section className="w-full  flex flex-col items-center justify-center mt-30 px-4 md:px-0 relative overflow-hidden">
-      <h3 className="lg:text-[1.5vw] -mb-5 md:text-[10vw] text-(--text-color) ">
-        👋, My name is Jobayer and I am a{" "}
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden ">
+      {/* Intro line */}
+      <h3 className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-[1.5vw] text-(--text-color) mt-20 sm:mt-20 lg:mb-4">
+        👋 My name is Jobayer and I am a
       </h3>
-      <img
-        className="relative z-10   w-[80vw] md:w-[65vw] lg:w-[24vw]
-    h-auto
-    max-w-full"
-        src={image}
-        alt=""
-      />
 
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="relative">
-          <h1 className="text-(--text-color) sm:text-[17vw] md:text-[20vw] lg:text-[14vw] font-[font3] uppercase leading-none">
+      {/* Big text */}
+      <div className="relative mt-3 flex justify-center md:absolute md:inset-0 md:items-center ">
+        <div className="relative text-center">
+          <h1
+            className=" font-[font2] text-(--text-color)
+            text-[13vw] tracking-wider lg:tracking-wider sm:text-[14vw] md:text-[16vw] lg:text-[14vw]"
+          >
             Web Developer
           </h1>
 
-          <p className="absolute bottom-0 right-0 translate-y-full text-[1.4vw] text-(--text-color)">
-            Based in Rajshahi,Bangladesh.
+          <p className="-mt-1 sm:mt-2 text-xl sm:text-xl md:text-lg lg:text-[1vw] text-(--text-color) md:absolute md:bottom-0 md:right-0 md:translate-y-full">
+            Based in Rajshahi, Bangladesh
           </p>
         </div>
       </div>
+      <div className="flex flex-col-reverse md:flex-col items-center w-full">
+        {/* Image */}
+        <img
+          src={image}
+          alt="Jobayer"
+          className="relative z-10 mt-4 lg:mt-4 w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[24vw] h-auto"
+        />
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 z-20">
+          <NavLink
+            to="/services"
+            className="text-sm md:text-base px-6 py-3 border rounded-md
+      bg-(--text-color) text-white transition-all duration-300
+      hover:px-10 shadow-md"
+          >
+            You need a developer
+          </NavLink>
 
-      <div className="flex gap-4 mt-[2vw] ">
-        <NavLink
-          className="text-[.9vw] px-5 py-3  border rounded-md bg-(--text-color)  text-white  transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg"
-          to="/services"
-        >
-          You need a developer
-        </NavLink>
-        <a
-          target="_blank"
-          href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume/Jobayer-Mahmud-Resume.pdf"
-          className="text-[.9vw] px-8 py-3 border rounded-md bg-(--bg-color) text-(--text-color)
-    transition-all duration-200 ease-out
-     hover:px-12 
-     "
-        >
-          Resume
-        </a>
+          <a
+            target="_blank"
+            href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume/Jobayer-Mahmud-Resume.pdf"
+            className="text-sm md:text-base px-6 py-3 border rounded-md
+      bg-(--bg-color) text-(--text-color)
+      transition-all duration-300 hover:px-10"
+          >
+            Resume
+          </a>
+        </div>
       </div>
     </section>
   );
