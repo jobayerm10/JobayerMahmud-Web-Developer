@@ -19,7 +19,7 @@ const Intro = () => {
             Web Developer
           </h1>
 
-          <p className="-mt-1 sm:mt-2 text-xl sm:text-xl md:text-lg lg:text-[1vw] text-(--text-color) md:absolute md:bottom-0 md:right-0 md:translate-y-full">
+          <p className="mt-2 sm:mt-2 text-xl sm:text-xl md:text-lg lg:text-[1vw] text-(--text-color) md:absolute md:bottom-0 md:right-0 md:translate-y-full">
             Based in Rajshahi, Bangladesh
           </p>
         </div>
