@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden ">
       {/* Intro line */}
-      <h3 className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-[1.5vw] text-(--text-color) mt-20 sm:mt-20 lg:mb-4">
+      <h3 className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-[1.5vw] text-(--text-color) mt-40 sm:mt-20 lg:mb-4">
         👋 My name is Jobayer and I am a
       </h3>
 
