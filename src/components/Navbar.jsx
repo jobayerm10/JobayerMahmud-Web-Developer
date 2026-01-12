@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import MobileNav from "../Navigation/MobileNav";
 
 const Navbar = () => {
   return (
@@ -41,6 +42,7 @@ const Navbar = () => {
           </nav>
         </div>
       </div>
+      <MobileNav></MobileNav>
     </header>
   );
 };
