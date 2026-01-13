@@ -3,37 +3,37 @@ import SocialMenu from "../components/SocialMenu";
 
 const MobileNav = ({ closeMenu }) => {
   return (
-    <div className=" w-full h-screen bg-(--text-bg) shadow-lg flex flex-col gap-10 transition-all">
+    <div className=" w-full h-screen shadow-lg flex flex-col gap-10 transition-all">
       <button
         onClick={closeMenu}
-        className="text-3xl absolute top-5 right-5 text-(--text-color)"
+        className="text-6xl absolute top-8 sm:top-12 right-3 sm:right-3 text-(--text-color)"
       >
         <FaTimes></FaTimes>
       </button>
-      <div className="py-10">
-        <div className="link relative flex justify-between items-center border-t-4 border-black overflow-hidden">
-          <h1 className="text-start ml-7 font-[font2] text-[7vw]">Home</h1>
-          <FaArrowCircleRight className="text-[5vw] mr-10"></FaArrowCircleRight>
+      <div className="flex flex-col">
+        <div className="flex justify-between items-center h-[12vh] border-t-4 border-black">
+          <h1 className="ml-6 font-[font2] text-[9vw]">Home</h1>
+          <FaArrowCircleRight className="mr-6 text-[8vw]" />
         </div>
 
-        <div className="link relative flex justify-between items-center border-t-4 border-black overflow-hidden">
-          <h1 className="text-start ml-7 font-[font2] text-[7vw] cursor-pointer">
-            Sevices
-          </h1>
-          <FaArrowCircleRight className="text-[5vw] mr-10"></FaArrowCircleRight>
+        <div className="flex justify-between items-center h-[12vh] border-t-4 border-black">
+          <h1 className="ml-6 font-[font2] text-[9vw]">Services</h1>
+          <FaArrowCircleRight className="mr-6 text-[8vw]" />
         </div>
 
-        <div className="link relative flex justify-between items-center border-t-4 border-black overflow-hidden">
-          <h1 className="text-start ml-7 font-[font2] text-[7vw]">Skills</h1>
-          <FaArrowCircleRight className="text-[5vw] mr-10"></FaArrowCircleRight>
+        <div className="flex justify-between items-center h-[12vh] border-t-4 border-black">
+          <h1 className="ml-6 font-[font2] text-[9vw]">Skills</h1>
+          <FaArrowCircleRight className="mr-6 text-[8vw]" />
         </div>
 
-        <div className="link relative flex justify-between items-center border-y-4 border-black overflow-hidden">
-          <h1 className="text-start ml-7 font-[font2] text-[7vw]">Projects</h1>
-          <FaArrowCircleRight className="text-[5vw] mr-10"></FaArrowCircleRight>
+        <div className="flex justify-between items-center h-[12vh] border-y-4 border-black">
+          <h1 className="ml-6 font-[font2] text-[9vw]">Projects</h1>
+          <FaArrowCircleRight className="mr-6 text-[8vw]" />
         </div>
       </div>
-      <SocialMenu></SocialMenu>
+      <div className="h-1/2 ">
+        <SocialMenu></SocialMenu>
+      </div>
     </div>
   );
 };

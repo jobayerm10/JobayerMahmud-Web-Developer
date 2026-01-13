@@ -7,11 +7,11 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-(--text-bg)   ">
-      <div className="max-w-full mx-10">
-        <div className="flex justify-between items-center">
+      <div className="max-w-full mx-5 lg:mx-10">
+        <div className="flex justify-between items-center mt-6 lg:mt-0">
           <NavLink
             to="/"
-            className="text-[3vw] font-[font3] text-(--text-color) cursor-pointer"
+            className="text-[10vw] lg:text-[3vw] font-[font2]  text-(--text-color) cursor-pointer"
           >
             JOBAYER
           </NavLink>
@@ -45,7 +45,7 @@ const Navbar = () => {
           </nav>
           {!menuOpen && (
             <button
-              className="md:hidden text-2xl text-(--text-color)"
+              className="md:hidden text-4xl text-(--text-color)"
               onClick={() => setMenuOpen(true)}
             >
               <FaBars></FaBars>
