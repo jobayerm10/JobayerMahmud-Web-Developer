@@ -1,4 +1,4 @@
-import footerImage from "../assets/footerImg3.jpg";
+import footerImage from "../assets/footerImg8.png";
 import SocialLinks from "./SocialLInks";
 
 export const Footer = () => {
@@ -9,7 +9,7 @@ export const Footer = () => {
           <img
             src={footerImage}
             alt="Footer"
-            className="absolute inset-0 w-full h-[45vw] opacity-100 hover:opacity-5 object-cover scale-100 group-hover:scale-102 transition-all duration-500 object-center  "
+            className="absolute inset-0 w-full h-[80vw] lg:h-[50vw] opacity-100 hover:opacity-5 object-cover scale-100 group-hover:scale-102 transition-all duration-500 object-center  "
           />
         </div>
 
