@@ -29,9 +29,9 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col pt-2 pb-2 lg:flex  items-center justify-between px-[8vw] bg-(--text-color) w-full h-[5vw] text-[1vw] text-(--text-bg) ">
+      <div className="flex items-center justify-center px-[8vw] bg-(--text-color) w-full h-[8vw] lg:h-[5vw] text-[3vw] lg:text-[1vw] text-(--text-bg) ">
         <h1>Jobayer – Handcrafted in React, fueled by coffee ☕</h1>
-        <SocialLinks></SocialLinks>
+        {/* <SocialLinks></SocialLinks> */}
       </div>
     </div>
   );
