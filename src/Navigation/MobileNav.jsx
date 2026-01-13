@@ -12,22 +12,22 @@ const MobileNav = ({ closeMenu }) => {
       </button>
       <div className="flex flex-col">
         <div className="flex justify-between items-center h-[12vh] border-t-4 border-black">
-          <h1 className="ml-6 font-[font2] text-[9vw]">Home</h1>
+          <h1 className="ml-6 font-[font2] text-[8vw]">Home</h1>
           <FaArrowCircleRight className="mr-6 text-[8vw]" />
         </div>
 
         <div className="flex justify-between items-center h-[12vh] border-t-4 border-black">
-          <h1 className="ml-6 font-[font2] text-[9vw]">Services</h1>
+          <h1 className="ml-6 font-[font2] text-[8vw]">Services</h1>
           <FaArrowCircleRight className="mr-6 text-[8vw]" />
         </div>
 
         <div className="flex justify-between items-center h-[12vh] border-t-4 border-black">
-          <h1 className="ml-6 font-[font2] text-[9vw]">Skills</h1>
+          <h1 className="ml-6 font-[font2] text-[8vw]">Skills</h1>
           <FaArrowCircleRight className="mr-6 text-[8vw]" />
         </div>
 
         <div className="flex justify-between items-center h-[12vh] border-y-4 border-black">
-          <h1 className="ml-6 font-[font2] text-[9vw]">Projects</h1>
+          <h1 className="ml-6 font-[font2] text-[8vw]">Projects</h1>
           <FaArrowCircleRight className="mr-6 text-[8vw]" />
         </div>
       </div>
