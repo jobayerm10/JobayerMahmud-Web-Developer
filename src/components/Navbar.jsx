@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center mt-6 lg:mt-0">
           <NavLink
             to="/"
-            className="text-[10vw] lg:text-[3vw] font-[font2]  text-(--text-color) cursor-pointer"
+            className="text-[10vw] lg:text-[3vw] font-[font3]  text-(--text-color) cursor-pointer"
           >
             JOBAYER
           </NavLink>
