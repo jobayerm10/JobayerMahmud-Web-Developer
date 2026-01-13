@@ -1,4 +1,4 @@
-import footerImage from "../assets/footerImg8.png";
+import footerImage from "../assets/footerImg.png";
 import SocialLinks from "./SocialLInks";
 
 export const Footer = () => {
@@ -9,27 +9,27 @@ export const Footer = () => {
           <img
             src={footerImage}
             alt="Footer"
-            className="absolute inset-0 w-full h-[80vw] lg:h-[50vw] opacity-100 hover:opacity-5 object-cover scale-100 group-hover:scale-102 transition-all duration-500 object-center  "
+            className="absolute inset-0 w-full h-[80vw] lg:h-[50vw] object-cover object-top-right scale-100 group-hover:scale-102 transition-all duration-500"
           />
         </div>
 
-        <div className="relative z-20 min-h-[45vw] flex h-full flex-col items-center justify-center gap-[1vw] text-white ">
-          <h1 className="font-[font1] text-[3.5vw]">Let's meet!</h1>
-          <p className="text-center text-[1vw]">
+        <div className=" relative z-20 h-[45vw] flex  flex-col items-center justify-center gap-[1vw] text-white ">
+          <h1 className="font-[font2] text-[3vw]">Let's meet!</h1>
+          <p className="text-center text-[1vw] font-bold">
             We can attend a session where we will discuss <br /> your project,
             your issues and how to solve them.
           </p>
           <a
             target="_blank"
             href=""
-            className="  text-[.9vw] mt-5 px-5 py-3  border-4 rounded-md  text-(--text-bg)  transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg
+            className="  text-[.9vw] mt-5 px-5 py-3 rounded-md border-2 transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg
      "
           >
             Start a project
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-between px-[8vw] bg-(--text-color) w-full h-[8vw] text-[1vw] text-(--text-bg) ">
+      <div className="flex items-center justify-between px-[8vw] bg-(--text-color) w-full h-[5vw] text-[1vw] text-(--text-bg) ">
         <h1>Jobayer – Handcrafted in React, fueled by coffee ☕</h1>
         <SocialLinks></SocialLinks>
       </div>
