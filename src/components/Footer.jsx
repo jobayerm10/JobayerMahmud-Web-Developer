@@ -4,25 +4,25 @@ import SocialLinks from "./SocialLInks";
 export const Footer = () => {
   return (
     <div>
-      <div className="relative w-full min-h-[45vw] overflow-hidden group">
+      <div className="relative w-full min-h-[100vw] lg:min-h-[50vw] overflow-hidden group">
         <div>
           <img
             src={footerImage}
             alt="Footer"
-            className="absolute inset-0 w-full  lg:h-[50vw] object-cover object-top-right scale-100 group-hover:scale-102 transition-all duration-500"
+            className="absolute inset-0 w-full h-[100vw] lg:h-[50vw] object-cover object-top-right scale-100 group-hover:scale-102 transition-all duration-500"
           />
         </div>
 
-        <div className=" relative z-20 h-[45vw] flex  flex-col items-center justify-center gap-[1vw] text-white ">
-          <h1 className="font-[font2] text-[3vw]">Let's meet!</h1>
-          <p className="text-center text-[1vw] font-bold">
+        <div className=" relative z-20 h-[45vw] flex  flex-col items-center mt-[50vw] lg:mt-0 justify-center gap-[1vw] text-white ">
+          <h1 className="font-[font2] text-[7vw] lg:text-[3vw]">Let's meet!</h1>
+          <p className="text-center text-[3vw] lg:text-[1vw] ">
             We can attend a session where we will discuss <br /> your project,
             your issues and how to solve them.
           </p>
           <a
             target="_blank"
             href=""
-            className="  text-[.9vw] mt-5 px-5 py-3 rounded-md border-2 transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg
+            className=" text-[3vw] lg:text-[.9vw] mt-3 px-5 py-3 rounded-md border-2 bg-(--text-bg) text-(--text-color) transition-all duration-300 ease-out hover:px-10 shadow-md hover:shadow-lg
      "
           >
             Start a project
