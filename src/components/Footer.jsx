@@ -29,7 +29,7 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-center px-[8vw] bg-(--text-color) w-full h-[8vw] lg:h-[5vw] text-[3vw] lg:text-[1vw] text-(--text-bg) ">
+      <div className="flex items-center justify-center px-[8vw] bg-(--text-color) w-full h-[30vw] lg:h-[5vw] text-[3.4vw] lg:text-[1vw] text-(--text-bg) ">
         <h1>Jobayer – Handcrafted in React, fueled by coffee ☕</h1>
         {/* <SocialLinks></SocialLinks> */}
       </div>
