@@ -1,6 +1,7 @@
 import { FaArrowCircleRight, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import SocialMenu from "../components/SocialMenu";
+import { TfiClose } from "react-icons/tfi";
 
 const MobileNav = ({ closeMenu }) => {
   // ✅ Menu items array
@@ -16,9 +17,9 @@ const MobileNav = ({ closeMenu }) => {
       {/* Close icon */}
       <button
         onClick={closeMenu}
-        className="text-6xl absolute top-8 sm:top-12 right-3 sm:right-3 text-(--text-color)"
+        className="text-2xl absolute top-12 sm:top-12 right-6 sm:right-3 text-(--text-color)"
       >
-        <FaTimes />
+        <TfiClose></TfiClose>
       </button>
 
       {/* Menu Items */}
