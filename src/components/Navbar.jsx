@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import MobileNav from "../Navigation/MobileNav";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
+import { CiMenuFries } from "react-icons/ci";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,7 +49,7 @@ const Navbar = () => {
               className="md:hidden text-4xl text-(--text-color)"
               onClick={() => setMenuOpen(true)}
             >
-              <FaBars></FaBars>
+              <CiMenuFries></CiMenuFries>
             </button>
           )}
         </div>
