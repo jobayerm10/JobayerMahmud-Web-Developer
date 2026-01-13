@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import MobileNav from "../Navigation/MobileNav";
+import { FaBars } from "react-icons/fa";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-(--text-bg)   ">
       <div className="max-w-full mx-10">
@@ -13,7 +16,7 @@ const Navbar = () => {
             JOBAYER
           </NavLink>
 
-          <nav>
+          <nav className="hidden md:block">
             <ul className="flex items-center gap-13">
               <li className="relative text-(--text-color) text-[0.9vw] transition-transform duration-300 ease-out hover:-translate-y-1 cursor-pointer">
                 <NavLink to="/">Home</NavLink>
@@ -40,9 +43,17 @@ const Navbar = () => {
               </a>
             </ul>
           </nav>
+          {!menuOpen && (
+            <button
+              className="md:hidden text-2xl text-(--text-color)"
+              onClick={() => setMenuOpen(true)}
+            >
+              <FaBars></FaBars>
+            </button>
+          )}
         </div>
       </div>
-      <MobileNav></MobileNav>
+      {menuOpen && <MobileNav closeMenu={() => setMenuOpen(false)}></MobileNav>}
     </header>
   );
 };

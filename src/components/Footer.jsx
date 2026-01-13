@@ -1,4 +1,5 @@
 import footerImage from "../assets/footerImg3.jpg";
+import SocialLinks from "./SocialLInks";
 
 export const Footer = () => {
   return (
@@ -30,14 +31,7 @@ export const Footer = () => {
       </div>
       <div className="flex items-center justify-between px-[8vw] bg-(--text-color) w-full h-[8vw] text-[1vw] text-(--text-bg) ">
         <h1>Jobayer – Handcrafted in React, fueled by coffee ☕</h1>
-        <a
-          target="_blank"
-          href="mailto:jobayermahmud976@gmail.com"
-          className="text-[0.9vw] px-5 py-3  hover:border-2 rounded-full bg-(--text-color) text-(--text-bg) transition-all duration-300 ease-out hover:px-9 shadow-md hover:shadow-lg
-     "
-        >
-          @jobayer
-        </a>
+        <SocialLinks></SocialLinks>
       </div>
     </div>
   );

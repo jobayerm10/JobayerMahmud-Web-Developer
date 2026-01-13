@@ -88,7 +88,7 @@ const Projects = () => {
         What I’ve Built{" "}
       </h2> */}
       <div className="sunmmery mt-[10vw] mx-auto max-w-[70vw]">
-        <p className="text-center text-[2.5vw] font-[font1]">
+        <p className="text-center text-[2.5vw] font-[font2]">
           These are some of the projects I’ve created while learning and
           improving my development skills. Each project reflects my journey in
           frontend development and problem-solving.
