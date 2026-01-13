@@ -20,14 +20,14 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className=" flex gap-14 items-center justify-between">
+    <div className=" flex gap-5 lg:gap-14 items-center justify-between">
       {links.map((link) => (
         <a
           key={link.label}
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className=" text-3xl"
+          className="text-xs lg:text-3xl"
           aria-label={link.label}
         >
           {link.icon}

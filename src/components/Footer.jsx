@@ -9,7 +9,7 @@ export const Footer = () => {
           <img
             src={footerImage}
             alt="Footer"
-            className="absolute inset-0 w-full h-[80vw] lg:h-[50vw] object-cover object-top-right scale-100 group-hover:scale-102 transition-all duration-500"
+            className="absolute inset-0 w-full  lg:h-[50vw] object-cover object-top-right scale-100 group-hover:scale-102 transition-all duration-500"
           />
         </div>
 
