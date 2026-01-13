@@ -12,15 +12,15 @@ html {
 
 @font-face {
   font-family: font1;
-  src: url(../public/fonts/61dda8782d6530778e4343c5_mediasanssemicondensed-bold-TRIAL.otf);
+  src: url(/fonts/61dda8782d6530778e4343c5_mediasanssemicondensed-bold-TRIAL.otf);
 }
 @font-face {
   font-family: font2;
-  src: url(../public/fonts/624325ea630c625303e9b1f9_Media\ Sans\ SemiCondensed\ -\ Extended.ttf);
+  src: url(/fonts/624325ea630c625303e9b1f9_Media\ Sans\ SemiCondensed\ -\ Extended.ttf);
 }
 @font-face {
   font-family: font3;
-  src: url(../public/fonts/Magz.otf);
+  src: url(/fonts/Magz.otf);
   font-weight: normal;
   font-style: normal;
 }

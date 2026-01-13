@@ -1,38 +1,48 @@
 import { FaArrowCircleRight, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import SocialMenu from "../components/SocialMenu";
 
 const MobileNav = ({ closeMenu }) => {
+  // ✅ Menu items array
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Skills", path: "/skills" },
+    { name: "Projects", path: "/projects" },
+  ];
+
   return (
-    <div className=" w-full h-screen shadow-lg flex flex-col gap-10 transition-all">
+    <div className="w-full h-screen shadow-lg flex flex-col transition-all bg-(--text-bg)">
+      {/* Close icon */}
       <button
         onClick={closeMenu}
         className="text-6xl absolute top-8 sm:top-12 right-3 sm:right-3 text-(--text-color)"
       >
-        <FaTimes></FaTimes>
+        <FaTimes />
       </button>
+
+      {/* Menu Items */}
       <div className="flex flex-col">
-        <div className="flex justify-between items-center h-[12vh] border-t-4 border-black">
-          <h1 className="ml-6 font-[font2] text-[8vw]">Home</h1>
-          <FaArrowCircleRight className="mr-6 text-[8vw]" />
-        </div>
-
-        <div className="flex justify-between items-center h-[12vh] border-t-4 border-black">
-          <h1 className="ml-6 font-[font2] text-[8vw]">Services</h1>
-          <FaArrowCircleRight className="mr-6 text-[8vw]" />
-        </div>
-
-        <div className="flex justify-between items-center h-[12vh] border-t-4 border-black">
-          <h1 className="ml-6 font-[font2] text-[8vw]">Skills</h1>
-          <FaArrowCircleRight className="mr-6 text-[8vw]" />
-        </div>
-
-        <div className="flex justify-between items-center h-[12vh] border-y-4 border-black">
-          <h1 className="ml-6 font-[font2] text-[8vw]">Projects</h1>
-          <FaArrowCircleRight className="mr-6 text-[8vw]" />
-        </div>
+        {menuItems.map((item, index) => (
+          <NavLink
+            key={item.name}
+            to={item.path}
+            onClick={closeMenu} // closes menu when clicked
+            className={`flex justify-between items-center h-[12vh] px-6 text-[8vw] font-[font2] text-(--text-color) hover:bg-(--text-bg)/10 transition-all ${
+              index === menuItems.length - 1
+                ? "border-y-4 border-black"
+                : "border-t-4 border-black"
+            }`}
+          >
+            <span>{item.name}</span>
+            <FaArrowCircleRight className="text-[8vw] mr-6" />
+          </NavLink>
+        ))}
       </div>
-      <div className="h-1/2 ">
-        <SocialMenu></SocialMenu>
+
+      {/* Social Links */}
+      <div className="mt-auto h-1/2">
+        <SocialMenu />
       </div>
     </div>
   );
