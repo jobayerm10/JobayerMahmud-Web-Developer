@@ -3,7 +3,7 @@ import SocialLinks from "./SocialLInks";
 
 const SocialMenu = () => {
   return (
-    <div className="flex flex-col items-center gap-50 ">
+    <div className="flex flex-col items-center gap-38 ">
       <div className="flex flex-col items-center gap-8">
         <a className="text-xl" href="mailto:jobayermahmud976@gmail.com">
           hello@jobayer{" "}
