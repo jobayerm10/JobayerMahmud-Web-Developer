@@ -4,7 +4,6 @@ import SocialMenu from "../components/SocialMenu";
 import { TfiClose } from "react-icons/tfi";
 
 const MobileNav = ({ closeMenu }) => {
-  // ✅ Menu items array
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
@@ -14,7 +13,6 @@ const MobileNav = ({ closeMenu }) => {
 
   return (
     <div className="w-full h-screen shadow-lg flex flex-col transition-all bg-(--text-bg)">
-      {/* Close icon */}
       <button
         onClick={closeMenu}
         className="text-2xl absolute top-12 sm:top-12 right-6 sm:right-3 text-(--text-color)"
@@ -22,13 +20,12 @@ const MobileNav = ({ closeMenu }) => {
         <TfiClose></TfiClose>
       </button>
 
-      {/* Menu Items */}
       <div className="flex flex-col">
         {menuItems.map((item, index) => (
           <NavLink
             key={item.name}
             to={item.path}
-            onClick={closeMenu} // closes menu when clicked
+            onClick={closeMenu}
             className={`flex justify-between items-center h-[12vh] px-6 text-[8vw] font-[font2] text-(--text-color) hover:bg-(--text-bg)/10 transition-all ${
               index === menuItems.length - 1
                 ? "border-y-4 border-black"
@@ -41,7 +38,6 @@ const MobileNav = ({ closeMenu }) => {
         ))}
       </div>
 
-      {/* Social Links */}
       <div className="mt-auto h-1/2">
         <SocialMenu />
       </div>

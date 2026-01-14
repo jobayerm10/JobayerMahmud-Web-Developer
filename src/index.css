@@ -16,11 +16,15 @@ html {
 }
 @font-face {
   font-family: font2;
-  src: url(/fonts/624325ea630c625303e9b1f9_Media\ Sans\ SemiCondensed\ -\ Extended.ttf);
+  src: url(../public/fonts/mediasanssemicondensed-bold-TRIAL-BF63c75479cdb92.otf);
 }
 @font-face {
   font-family: font3;
   src: url(/fonts/Magz.otf);
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: font4;
+  src: url(/fonts/61dda8ac2d6530d8d9434405_SFProDisplay-Light.otf);
 }

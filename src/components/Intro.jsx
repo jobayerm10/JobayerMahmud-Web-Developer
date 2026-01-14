@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden ">
       {/* Intro line */}
-      <h3 className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-[1.5vw] text-(--text-color)/90 mt-40 sm:mt-20 lg:mb-4">
+      <h3 className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-[1.5vw] font-[font4] text-(--text-color)/90 mt-40 sm:mt-20 lg:mb-4">
         👋 My name is Jobayer and I am a
       </h3>
 
@@ -19,7 +19,7 @@ const Intro = () => {
             Web Developer
           </h1>
 
-          <p className="mt-2 sm:mt-2 text-xl sm:text-xl md:text-lg lg:text-[1vw] text-(--text-color)/90 md:absolute md:bottom-0 md:right-0 md:translate-y-full">
+          <p className="mt-2 sm:mt-2 text-xl sm:text-xl md:text-lg lg:text-[1vw] text-(--text-color)/90 md:absolute md:bottom-0 md:right-0 md:translate-y-full font-[font4]">
             Based in Rajshahi, Bangladesh
           </p>
         </div>
@@ -29,7 +29,7 @@ const Intro = () => {
         <img
           src={image}
           alt="Jobayer"
-          className="relative z-10 mt-4 lg:mt-4 w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[24vw] h-auto"
+          className="relative  z-10 mt-4 lg:mt-4 w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[24vw] h-auto"
         />
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8 z-20">

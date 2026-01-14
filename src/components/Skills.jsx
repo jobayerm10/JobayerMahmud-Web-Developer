@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <div className="">
       <div className="sunmmery mt-[10vw] mx-10">
-        <h1 className=" text-[3.5vw] font-[font1]">
+        <h1 className=" text-[3.5vw] font-[font2]">
           The Frontend Tools I work with
         </h1>
       </div>
