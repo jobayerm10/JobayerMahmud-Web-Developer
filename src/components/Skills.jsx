@@ -72,7 +72,7 @@ const Skills = () => {
                     {skill.title}
                   </h3>
                 </div>
-                <p className="text-gray-300 mb-4 text-center text-xs xs:text-sm md:text-base font-[font4]">
+                <p className="text-white mb-4 text-center text-xs xs:text-sm md:text-base font-[font4]">
                   {skill.desc}
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 mt-auto">
