@@ -57,7 +57,7 @@ const Skills = () => {
                   "p-4 xs:p-5 md:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#1b1b19] transition duration-300 hover:scale-105 shadow-md flex flex-col h-full font-[font4] font-semibold leading-wide"
                 }
               >
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center justify-center gap-2 mb-2">
                   {/* You could add icons here. */}
                   {skill.icon ? (
                     <img
@@ -68,14 +68,14 @@ const Skills = () => {
                   ) : (
                     <span className="w-6 h-6" />
                   )}
-                  <h3 className="text-base xs:text-lg md:text-xl font-[font4] font-bold text-white">
+                  <h3 className="text-base xs:text-lg md:text-xl font-[font4] font-bold mr-10  text-white">
                     {skill.title}
                   </h3>
                 </div>
-                <p className="text-gray-300 mb-4 text-xs xs:text-sm md:text-base font-[font4]">
+                <p className="text-gray-300 mb-4 text-center text-xs xs:text-sm md:text-base font-[font4]">
                   {skill.desc}
                 </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex flex-wrap justify-center gap-2 mt-auto">
                   {skill.tags.map((tag) => (
                     <span
                       key={tag}
