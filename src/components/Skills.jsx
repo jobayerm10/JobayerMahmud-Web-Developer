@@ -79,7 +79,7 @@ const Skills = () => {
                   {skill.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-[#1b1b19] px-3 py-1 rounded-full text-xs md:text-sm text-white font-[font4]"
+                      className="bg-[#1b1b19] px-3 py-1 border border-white rounded-full text-xs md:text-sm text-white font-[font4]"
                     >
                       {tag}
                     </span>
