@@ -54,7 +54,7 @@ const Skills = () => {
               <div
                 key={skill.title}
                 className={
-                  "p-4 xs:p-5 md:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#34d399] transition duration-300 hover:scale-105 shadow-md flex flex-col h-full"
+                  "p-4 xs:p-5 md:p-6 bg-[#181818] rounded-2xl hover:shadow-[0_0_25px_#1b1b19] transition duration-300 hover:scale-105 shadow-md flex flex-col h-full font-[font4] font-semibold leading-wide"
                 }
               >
                 <div className="flex items-center gap-2 mb-2">
@@ -68,18 +68,18 @@ const Skills = () => {
                   ) : (
                     <span className="w-6 h-6" />
                   )}
-                  <h3 className="text-base xs:text-lg md:text-xl font-bold text-white">
+                  <h3 className="text-base xs:text-lg md:text-xl font-[font4] font-bold text-white">
                     {skill.title}
                   </h3>
                 </div>
-                <p className="text-gray-300 mb-4 text-xs xs:text-sm md:text-base">
+                <p className="text-gray-300 mb-4 text-xs xs:text-sm md:text-base font-[font4]">
                   {skill.desc}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {skill.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-[#2c2c2c] px-3 py-1 rounded-full text-xs md:text-sm text-white"
+                      className="bg-[#1b1b19] px-3 py-1 rounded-full text-xs md:text-sm text-white font-[font4]"
                     >
                       {tag}
                     </span>
