@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden ">
       {/* Intro line */}
-      <h3 className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-[1.5vw] font-[font4] text-(--text-color)/90 mt-40 sm:mt-20 lg:mb-4">
+      <h3 className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-3xl font-[font4] text-(--text-color)/90 mt-40 sm:mt-45 md:mt-30 lg:mt-10">
         👋 My name is Jobayer and I am a
       </h3>
 
@@ -14,7 +14,7 @@ const Intro = () => {
         <div className="relative text-center">
           <h1
             className=" font-[font2] text-(--text-color)
-            text-[13vw] tracking-wider lg:tracking-wider sm:text-[14vw] md:text-[16vw] lg:text-[14vw]"
+            text-[13vw] tracking-wide lg:tracking-wider sm:text-[14vw] md:text-[16vw] lg:text-[14vw]"
           >
             Web Developer
           </h1>
