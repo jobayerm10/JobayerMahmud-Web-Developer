@@ -12,12 +12,10 @@ const Projects = () => {
       image1: Image1,
       image2: Image2,
     },
-
     {
       image1: Image3,
       image2: Image4,
     },
-
     {
       image1: Image5,
       image2: Image6,
@@ -26,12 +24,10 @@ const Projects = () => {
       image1: Image1,
       image2: Image2,
     },
-
     {
       image1: Image3,
       image2: Image4,
     },
-
     {
       image1: Image5,
       image2: Image6,
@@ -40,12 +36,10 @@ const Projects = () => {
       image1: Image1,
       image2: Image2,
     },
-
     {
       image1: Image3,
       image2: Image4,
     },
-
     {
       image1: Image5,
       image2: Image6,
@@ -54,61 +48,40 @@ const Projects = () => {
       image1: Image1,
       image2: Image2,
     },
-
     {
       image1: Image3,
       image2: Image4,
     },
-
     {
       image1: Image5,
       image2: Image6,
     },
   ];
-  // gsap.registerPlugin(ScrollTrigger);
-  // useGSAP(() => {
-  //   gsap.from(".hero", {
-  //     height: "50px",
-  //     stagger: {
-  //       amount: 0.4,
-  //     },
-  //     scrollTrigger: {
-  //       trigger: ".parent",
-  //       markers: true,
-  //       start: "top 100%",
-  //       end: "top -150%",
-  //       scrub: true,
-  //     },
-  //   });
-  // });
 
   return (
-    <div className="p-4">
+    <div className="p-4 sm:p-6 lg:p-10">
       {/* <h2 className="font-[font2] text-[6.5vw] uppercase text-center">
         What I’ve Built{" "}
       </h2> */}
-      <div className="sunmmery mt-[10vw] mx-auto max-w-[70vw]">
-        <p className="text-center text-[2.5vw] font-[font2]">
+      <div className="text-center mt-[25vw] lg:mt-[10vw] mx-auto max-w-full md:max-w-[80vw] lg:max-w-[70vw]">
+        <p className=" text-[5vw] xs:text-[4vw] sm:text-[3vw] md:text-[2.5vw] font-[font2]">
           These are some of the projects I’ve created while learning and
           improving my development skills. Each project reflects my journey in
           frontend development and problem-solving.
         </p>
       </div>
-      <div className="mt-[5vw]">
-        <div className=" parent">
-          {projects.map((elem, index) => {
-            return (
-              <div
-                key={index}
-                className=" hero w-full h-[550px] flex mb-3 gap-5"
-              >
-                <ProjectCard
-                  image1={elem.image1}
-                  image2={elem.image2}
-                ></ProjectCard>
-              </div>
-            );
-          })}
+      <div className="mt-[8vw] sm:mt-[5vw] flex justify-center">
+        <div className="parent grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-7 justify-items-center">
+          {projects.map((elem, index) => (
+            <div
+              key={index}
+              className="rounded-2xl overflow-hidden shadow-2xl
+            w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[24vw]
+            h-[50vw] sm:h-[30vw] md:h-[20vw] lg:h-[18vw]"
+            >
+              <ProjectCard image1={elem.image1} image2={elem.image2} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

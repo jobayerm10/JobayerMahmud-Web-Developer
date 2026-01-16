@@ -14,7 +14,7 @@ const ImageCard = () => {
         {images.map((img, index) => (
           <div
             key={index}
-            className="bg-red-900 rounded-2xl overflow-hidden shadow-2xl
+            className=" rounded-2xl overflow-hidden shadow-2xl
             w-[80vw] sm:w-[45vw] md:w-[30vw] lg:w-[24vw]
             h-[50vw] sm:h-[30vw] md:h-[20vw] lg:h-[18vw]"
           >
