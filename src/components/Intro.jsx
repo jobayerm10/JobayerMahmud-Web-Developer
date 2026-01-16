@@ -14,7 +14,7 @@ const Intro = () => {
         <div className="relative text-center">
           <h1
             className=" font-[font2] text-(--text-color)
-            text-[13vw] tracking-wide lg:tracking-wider sm:text-[14vw] md:text-[16vw] lg:text-[14vw]"
+            text-[13vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[14vw]"
           >
             Web Developer
           </h1>
