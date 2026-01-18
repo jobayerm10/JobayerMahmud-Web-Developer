@@ -4,7 +4,6 @@ import LocomotiveScroll from "locomotive-scroll";
 const locomotiveScroll = new LocomotiveScroll();
 
 import Home from "./pages/Home";
-import AboutMe from "./components/AboutMe";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -16,7 +15,6 @@ function App() {
       <Routes>
         <Route element={<MainLayout></MainLayout>}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutMe />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
