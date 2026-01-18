@@ -1,9 +1,38 @@
-import { FaArrowCircleRight, FaTimes } from "react-icons/fa";
+import { FaArrowCircleRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import SocialMenu from "../components/SocialMenu";
 import { TfiClose } from "react-icons/tfi";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
 
 const MobileNav = ({ closeMenu }) => {
+  const menuRef = useRef(null);
+  const tlRef = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.from(".mobile-link", {
+      y: 80,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      stagger: 0.12,
+    });
+
+    tlRef.current = tl;
+  }, { scope: menuRef });
+
+  const handleClose = () => {
+    gsap.to(".mobile-link", {
+      y: 80,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.in",
+      stagger: 0.08,
+      onComplete: closeMenu,
+    });
+  };
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -13,13 +42,15 @@ const MobileNav = ({ closeMenu }) => {
   ];
 
   return (
-    <div className="w-full h-screen shadow-lg flex flex-col transition-all bg-(--text-bg)">
-      {/* No more stair animation or animation trigger */}
+    <div
+      ref={menuRef}
+      className="w-full h-screen bg-(--text-bg) flex flex-col"
+    >
       <button
-        onClick={closeMenu}
-        className="text-2xl absolute top-12 sm:top-12 right-6 sm:right-3 text-(--text-color)"
+        onClick={handleClose}
+        className="text-2xl absolute top-12 right-6 text-(--text-color) z-10"
       >
-        <TfiClose></TfiClose>
+        <TfiClose />
       </button>
 
       <div className="relative flex flex-col">
@@ -27,12 +58,13 @@ const MobileNav = ({ closeMenu }) => {
           <NavLink
             key={item.name}
             to={item.path}
-            onClick={closeMenu}
-            className={`flex justify-between items-center h-[12vh] px-6 text-[8vw] font-[font2] text-(--text-color) hover:bg-(--text-bg)/10 transition-all ${
-              index === menuItems.length - 1
-                ? "border-y-4 border-black"
-                : "border-t-4 border-black"
-            }`}
+            onClick={handleClose}
+            className={`mobile-link flex justify-between items-center h-[12vh] px-6 text-[8vw] font-[font2] text-(--text-color)
+              ${
+                index === menuItems.length - 1
+                  ? "border-y-4 border-black"
+                  : "border-t-4 border-black"
+              }`}
           >
             <span>{item.name}</span>
             <FaArrowCircleRight className="text-[8vw] mr-6" />
@@ -40,7 +72,7 @@ const MobileNav = ({ closeMenu }) => {
         ))}
       </div>
 
-      <div className="mt-auto h-1/2">
+      <div className="mt-auto h-1/2 mobile-link">
         <SocialMenu />
       </div>
     </div>
