@@ -12,6 +12,7 @@ const Intro = () => {
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
+      tl.delay(1.4); 
 
     // Image comes from right
     tl.from(imageRef.current, { x: 200, opacity: 0 });
@@ -34,7 +35,7 @@ const Intro = () => {
       {/* Intro line */}
       <h3
         ref={introRef}
-        className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-3xl font-[font4] text-(--text-color)/90 mt-40 sm:mt-45 md:mt-30 lg:mt-10"
+        className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-3xl font-[font4] text-(--text-color)/90 mt-40 sm:mt-45 md:mt-33 lg:mt-10"
       >
         👋, My name is Jobayer and I am a
       </h3>
