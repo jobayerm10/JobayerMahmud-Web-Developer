@@ -2,8 +2,38 @@ import { FaArrowCircleRight, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import SocialMenu from "../components/SocialMenu";
 import { TfiClose } from "react-icons/tfi";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+
 
 const MobileNav = ({ closeMenu }) => {
+    const stairParentRef = useRef(null);
+   useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.to(stairParentRef.current, {
+      display: "block",
+    });
+    tl.from(".stair", {
+      height: 0,
+      stagger: {
+        amount: -0.25,
+      },
+    });
+    tl.to(".stair", {
+      y: "100%",
+      stagger: {
+        amount: -0.25,
+      },
+    });
+    tl.to(stairParentRef.current, {
+      display: "none",
+    });
+    tl.to(".stair", {
+      y: "0%",
+    })
+  
+  });
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
@@ -13,6 +43,15 @@ const MobileNav = ({ closeMenu }) => {
 
   return (
     <div className="w-full h-screen shadow-lg flex flex-col transition-all bg-(--text-bg)">
+      <div className="h-screen w-full fixed">
+           <div className="w-full h-full flex ">
+        <div className="stair h-full w-1/5 bg-black"></div>
+        <div className="stair h-full w-1/5 bg-black"></div>
+        <div className="stair h-full w-1/5 bg-black"></div>
+        <div className="stair h-full w-1/5 bg-black"></div>
+        <div className="stair h-full w-1/5 bg-black"></div>
+      </div>
+      </div>
       <button
         onClick={closeMenu}
         className="text-2xl absolute top-12 sm:top-12 right-6 sm:right-3 text-(--text-color)"
@@ -20,7 +59,7 @@ const MobileNav = ({ closeMenu }) => {
         <TfiClose></TfiClose>
       </button>
 
-      <div className="flex flex-col">
+      <div className="relative flex flex-col">
         {menuItems.map((item, index) => (
           <NavLink
             key={item.name}
