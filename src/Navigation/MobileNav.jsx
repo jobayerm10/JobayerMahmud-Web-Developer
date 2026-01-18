@@ -8,7 +8,7 @@ import { useRef } from "react";
 
 
 const MobileNav = ({ closeMenu }) => {
-    const stairParentRef = useRef(null);
+  const stairParentRef = useRef(null);
    useGSAP(() => {
     const tl = gsap.timeline();
     tl.to(stairParentRef.current, {
@@ -32,6 +32,7 @@ const MobileNav = ({ closeMenu }) => {
     tl.to(".stair", {
       y: "0%",
     })
+   
   
   });
   const menuItems = [
@@ -43,8 +44,8 @@ const MobileNav = ({ closeMenu }) => {
 
   return (
     <div className="w-full h-screen shadow-lg flex flex-col transition-all bg-(--text-bg)">
-      <div className="h-screen w-full fixed">
-           <div className="w-full h-full flex ">
+      <div ref={stairParentRef} className="h-screen w-full fixed inset-0 z-100">
+           <div className="w-full h-full flex">
         <div className="stair h-full w-1/5 bg-black"></div>
         <div className="stair h-full w-1/5 bg-black"></div>
         <div className="stair h-full w-1/5 bg-black"></div>
