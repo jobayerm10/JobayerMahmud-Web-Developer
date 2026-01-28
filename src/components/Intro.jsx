@@ -82,7 +82,7 @@ const Intro = () => {
 
           <a
             target="_blank"
-            href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume/Jobayer-Mahmud-Resume.pdf"
+        href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume@main/Jobayer_resume.pdf"
             className="text-center text-sm md:text-base px-6 py-3 border rounded-md
       bg-(--bg-color) text-(--text-color)
       transition-all duration-300 hover:px-10"
