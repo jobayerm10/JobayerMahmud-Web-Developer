@@ -12,7 +12,7 @@ const Intro = () => {
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
-      tl.delay(1.4); 
+    tl.delay(1.4);
 
     // Image comes from right
     tl.from(imageRef.current, { x: 200, opacity: 0 });
@@ -35,18 +35,18 @@ const Intro = () => {
       {/* Intro line */}
       <h3
         ref={introRef}
-        className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-3xl font-[font4] text-(--text-color)/90 mt-40 sm:mt-45 md:mt-33 lg:mt-10"
+        className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-xl font-[font4] text-(--text-color)/90 mt-40 sm:mt-45 md:mt-33 lg:mt-15"
       >
         👋, My name is Jobayer and I am a
       </h3>
 
       {/* Big text */}
-      <div className="relative mt-3 flex justify-center md:absolute md:inset-0 md:items-center">
+      <div className="relative mt-1 flex justify-center md:absolute md:inset-0 md:items-center ">
         <div className="relative text-center">
           <h1
             ref={titleRef}
             className="font-[font2] text-(--text-color)
-            text-[13vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[14vw]"
+            text-[13vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[14vw]  cursor-pointer"
           >
             Web Developer
           </h1>
@@ -66,11 +66,14 @@ const Intro = () => {
           ref={imageRef}
           src={image}
           alt="Jobayer"
-          className="relative z-10 mt-4 lg:mt-4 w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[24vw] h-auto"
+          className="relative z-10  w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[24vw] h-auto"
         />
 
         {/* Buttons */}
-        <div ref={buttonRef} className="flex flex-col sm:flex-row gap-4 mt-8 z-20">
+        <div
+          ref={buttonRef}
+          className="flex flex-col sm:flex-row gap-4 mt-2 z-20"
+        >
           <NavLink
             to="/services"
             className="text-sm md:text-base px-6 py-3 border rounded-md
@@ -82,7 +85,7 @@ const Intro = () => {
 
           <a
             target="_blank"
-       href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume@main/Jobayer_mahmud-resume.pdf?download=1"
+            href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume@main/Jobayer_mahmud-resume.pdf?download=1"
             className="text-center text-sm md:text-base px-6 py-3 border rounded-md
       bg-(--bg-color) text-(--text-color)
       transition-all duration-300 hover:px-10"
