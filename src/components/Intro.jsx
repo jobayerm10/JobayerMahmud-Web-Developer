@@ -51,6 +51,14 @@ const Intro = () => {
             Web Developer
           </h1>
 
+          <div className=" w-[30vw]  px-4 sm:px-6 md:px-8 lg:px-12 mt-2 flex justify-start">
+            <h4 className="text-left text-[4vw] sm:text-2xl md:text-3xl lg:text-xl font-[font4] text-(--text-color)/90">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Praesentium aut fuga harum quis omnis explicabo placeat recusandae
+              mollitia, nemo facere.
+            </h4>
+          </div>
+
           <p
             ref={subTextRef}
             className="mt-2 sm:mt-2 text-md sm:text-xl md:text-lg lg:text-[1vw] text-(--text-color)/90 md:absolute md:bottom-0 md:right-0 md:translate-y-full font-[font4]"
