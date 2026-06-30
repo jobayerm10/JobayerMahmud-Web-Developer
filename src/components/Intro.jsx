@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import image from "../assets/heroImg3.png";
+import image from "../assets/heroImg4.png";
 
 const Intro = () => {
   const imageRef = useRef(null);
   const titleRef = useRef(null);
   const introRef = useRef(null);
+  const skillTextRef = useRef(null);
   const subTextRef = useRef(null);
   const buttonRef = useRef(null);
 
@@ -23,6 +24,9 @@ const Intro = () => {
     // h3 intro comes from left
     tl.from(introRef.current, { x: -200, opacity: 0 }, "-=0.5");
 
+    // skill text comes from left
+    tl.from(skillTextRef.current, { x: -200, opacity: 0 }, "-=0.5");
+
     // p subtext comes from left
     tl.from(subTextRef.current, { x: -200, opacity: 0 }, "-=0.5");
 
@@ -32,39 +36,40 @@ const Intro = () => {
 
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
-      {/* Intro line */}
-      <h3
-        ref={introRef}
-        className="text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-xl font-[font4] text-(--text-color)/90 mt-40 sm:mt-45 md:mt-33 lg:mt-15"
-      >
-        👋, My name is Jobayer and I am a
-      </h3>
-
       {/* Big text */}
-      <div className="relative mt-1 flex justify-center md:absolute md:inset-0 md:items-center ">
+      <div className="relative mt-1 flex flex-col items-center justify-center md:absolute md:inset-0 md:items-center">
         <div className="relative text-center">
+          {/* Intro line */}
+          <h3
+            ref={introRef}
+            className="text-start text-[4.5vw] sm:text-2xl md:text-3xl lg:text-xl font-[font4] text-(--text-color)/90 mt-0 sm:mt-0 md:mt-0 lg:mt-0"
+          >
+            👋, My name is <span className="font-bold">Jobayer</span> and I am a
+          </h3>
+          <div className="flex justify-end">
+            <p
+              ref={subTextRef}
+              className="mt-1 mb-2 inline-block rounded-t-4xl bg-amber-700 px-4 py-2 text-right text-md sm:text-xl md:text-lg lg:text-[1.2vw] text-(--text-color)/90 font-[font4]"
+            >
+              Based in Rajshahi, Bangladesh
+            </p>
+          </div>
           <h1
             ref={titleRef}
             className="font-[font2] text-(--text-color)
-            text-[13vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[14vw]  cursor-pointer"
+            text-[13vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[14vw] cursor-pointer"
           >
             Web Developer
           </h1>
 
-          <div className=" w-[30vw]  px-4 sm:px-6 md:px-8 lg:px-12 mt-2 flex justify-start">
-            <h4 className="text-left text-[4vw] sm:text-2xl md:text-3xl lg:text-xl font-[font4] text-(--text-color)/90">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Praesentium aut fuga harum quis omnis explicabo placeat recusandae
-              mollitia, nemo facere.
+          <div
+            ref={skillTextRef}
+            className="w-[27vw] px-4 sm:px-6 md:px-8 lg:px-12 -mt-10 bg-amber-300 rounded-b-4xl flex justify-start"
+          >
+            <h4 className="text-left text-[4vw] sm:text-2xl md:text-3xl lg:text-[1.3vw] font-[font4] text-(--text-color)/90">
+              proficient in React, Node.js Express.js, MongoDB and more.
             </h4>
           </div>
-
-          <p
-            ref={subTextRef}
-            className="mt-2 sm:mt-2 text-md sm:text-xl md:text-lg lg:text-[1vw] text-(--text-color)/90 md:absolute md:bottom-0 md:right-0 md:translate-y-full font-[font4]"
-          >
-            Based in Rajshahi, Bangladesh
-          </p>
         </div>
       </div>
 
