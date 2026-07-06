@@ -10,18 +10,21 @@ const MobileNav = ({ closeMenu }) => {
   const menuRef = useRef(null);
   const tlRef = useRef(null);
 
-  useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.from(".mobile-link", {
-      y: 80,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out",
-      stagger: 0.12,
-    });
+  useGSAP(
+    () => {
+      const tl = gsap.timeline();
+      tl.from(".mobile-link", {
+        y: 80,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.12,
+      });
 
-    tlRef.current = tl;
-  }, { scope: menuRef });
+      tlRef.current = tl;
+    },
+    { scope: menuRef },
+  );
 
   const handleClose = () => {
     gsap.to(".mobile-link", {
@@ -37,15 +40,11 @@ const MobileNav = ({ closeMenu }) => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-    { name: "Skills", path: "/skills" },
     { name: "Projects", path: "/projects" },
   ];
 
   return (
-    <div
-      ref={menuRef}
-      className="w-full h-screen bg-(--text-bg) flex flex-col"
-    >
+    <div ref={menuRef} className="w-full h-screen bg-(--text-bg) flex flex-col">
       <button
         onClick={handleClose}
         className="text-2xl absolute top-12 right-6 text-(--text-color) z-10"
