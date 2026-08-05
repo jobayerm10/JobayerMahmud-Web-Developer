@@ -3,7 +3,7 @@ const ClientPriority = () => {
     <div className="flex items-center justify-center px-10 sm:px-8 py-20">
       <div className="text-left max-w-3xl">
         {/* First Heading with underline */}
-        <h1 className="relative inline-block text-[5.8vw] sm:text-3xl md:text-4xl font-[font2] ">
+        <h1 className="relative inline-block text-[6.8vw] sm:text-3xl md:text-4xl font-[font2] ">
           You need a website.
           <span className="absolute left-0 top-1/2 w-full h-1 bg-orange-500 -translate-y-1/2"></span>
         </h1>

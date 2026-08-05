@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import image from "../assets/heroImg4.png";
 import { Footer } from "./Footer";
 import ImageCard from "./ImageCard";
 import ClientPriority from "./ServicesParts/ClientPriority";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Intro = () => {
   const imageRef = useRef(null);
@@ -13,6 +16,9 @@ const Intro = () => {
   const skillTextRef = useRef(null);
   const subTextRef = useRef(null);
   const buttonRef = useRef(null);
+  const brandingTextRef = useRef(null);
+  const imageCardRef = useRef(null);
+  const clientPriorityRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
@@ -35,6 +41,54 @@ const Intro = () => {
 
     // buttons come from below
     tl.from(buttonRef.current, { y: 50, opacity: 0, stagger: 0.2 }, "-=0.3");
+
+    // ── Scroll-triggered animations for sections below hero ──
+
+    // Branding text
+    gsap.from(brandingTextRef.current, {
+      scrollTrigger: {
+        trigger: brandingTextRef.current,
+        start: "top 85%",
+        end: "top 40%",
+        toggleActions: "play none none reverse",
+      },
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    // ImageCard
+    gsap.from(imageCardRef.current, {
+      scrollTrigger: {
+        trigger: imageCardRef.current,
+        start: "top 85%",
+        end: "top 40%",
+        toggleActions: "play none none reverse",
+      },
+      y: 80,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+
+    // ClientPriority
+    gsap.from(clientPriorityRef.current, {
+      scrollTrigger: {
+        trigger: clientPriorityRef.current,
+        start: "top 85%",
+        end: "top 40%",
+        toggleActions: "play none none reverse",
+      },
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
   }, []);
 
   return (
@@ -120,18 +174,24 @@ const Intro = () => {
 
       <section id="services" className="w-full text-(--text-color)">
         <div className="mx-auto max-w-[90vw] pt-20 pb-0">
-          <div className="mx-auto max-w-[70vw] text-center">
+          <div
+            ref={brandingTextRef}
+            className="mx-auto max-w-[70vw] text-center"
+          >
             <p className="text-center text-[5.4vw] lg:text-[4.2vw] font-[font2]">
               Impactful branding and high-end <br /> productive websites for
               creatives.
             </p>
           </div>
 
-          <div className="projects h-auto flex items-center justify-center mt-12">
+          <div
+            ref={imageCardRef}
+            className="projects h-auto flex items-center justify-center mt-12"
+          >
             <ImageCard />
           </div>
 
-          <div className="mt-8">
+          <div ref={clientPriorityRef} className="mt-8">
             <ClientPriority />
           </div>
         </div>
