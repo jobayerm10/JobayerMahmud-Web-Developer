@@ -20,7 +20,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className=" flex gap-14 items-center justify-between">
+    <div className=" flex  items-center justify-between">
       {links.map((link) => (
         <a
           key={link.label}

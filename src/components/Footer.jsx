@@ -1,4 +1,4 @@
-import footerImage from "../assets/footerImg2.png";
+import footerImage from "../assets/footerImg.png";
 import SocialLinks from "./SocialLInks";
 
 export const Footer = () => {
@@ -11,6 +11,33 @@ export const Footer = () => {
           className="absolute inset-0 w-full h-[100vw] lg:h-[50vw] object-cover object-top-right scale-100 group-hover:scale-102 transition-all duration-500"
         />
 
+        {/* SQL text - middle left of footer image */}
+        <div className="absolute top-1/2 left-[5vw] lg:left-[8vw] transform -translate-y-1/2 z-20 text-(--text-bg)">
+          <h1 className="font-[font2] leading-snug text-[4.5vw] lg:text-[4vw] tracking-wide">
+            <div>
+              <span>SELECT </span>
+              <span className="text-(--text-color)">*</span>
+            </div>
+            <div>
+              <span>FROM the </span>
+              <span className="text-(--text-color)">World</span>
+            </div>
+            <div>
+              <span>WHERE </span>
+              <span className="text-(--text-color)">"Someone"</span>
+            </div>
+            <div>
+              <span>LIKE </span>
+              <span>%</span>
+              <span className="text-(--text-color)">You</span>
+              <span>%</span>
+            </div>
+          </h1>
+          <div className="mt-6 bg-fuchsia-400">
+            <SocialLinks />
+          </div>
+        </div>
+
         <div className="absolute left-1/2 bottom-6 transform -translate-x-1/2 z-20">
           <a
             target="_blank"
@@ -20,10 +47,6 @@ export const Footer = () => {
             Start a project
           </a>
         </div>
-      </div>
-      <div className="flex items-center justify-center px-[8vw] bg-(--text-color) w-full h-[30vw] lg:h-[5vw] text-[3.4vw] lg:text-[1vw] text-(--text-bg) ">
-        <h1 className="font-[font4] ">© 26 Jobayer. All Rights Reserved.</h1>
-        {/* <SocialLinks></SocialLinks> */}
       </div>
     </div>
   );

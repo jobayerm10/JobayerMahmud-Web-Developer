@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import image from "../assets/heroImg4.png";
@@ -10,6 +10,10 @@ import ClientPriority from "./ServicesParts/ClientPriority";
 gsap.registerPlugin(ScrollTrigger);
 
 const Intro = () => {
+  const [h1Hovered, setH1Hovered] = useState(false);
+  const [h2Hovered, setH2Hovered] = useState(false);
+  const [onHeadings, setOnHeadings] = useState(false);
+  const cursorRef = useRef(null);
   const imageRef = useRef(null);
   const titleRef = useRef([]);
   const introRef = useRef(null);
@@ -20,27 +24,38 @@ const Intro = () => {
   const imageCardRef = useRef(null);
   const clientPriorityRef = useRef(null);
 
+  // ── Custom cursor: track mouse position directly via ref (no re-render) ──
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
-    tl.delay(1.4);
+    const moveCursor = (e) => {
+      if (!cursorRef.current) return;
+      cursorRef.current.style.left = e.clientX + "px";
+      cursorRef.current.style.top  = e.clientY + "px";
+    };
+    window.addEventListener("mousemove", moveCursor);
+    return () => window.removeEventListener("mousemove", moveCursor);
+  }, []);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.55 } });
+    tl.delay(1.5);
 
     // Image comes from right
-    tl.from(imageRef.current, { x: 200, opacity: 0 });
+    tl.from(imageRef.current, { x: 120, opacity: 0 });
 
     // Title lines come from right
-    tl.from(titleRef.current, { x: 200, opacity: 0 }, "-=0.7"); // overlap animation
+    tl.from(titleRef.current, { x: 120, opacity: 0 }, "-=0.45"); // overlap animation
 
     // h3 intro comes from left
-    tl.from(introRef.current, { x: -200, opacity: 0 }, "-=0.5");
+    tl.from(introRef.current, { x: -120, opacity: 0 }, "-=0.4");
 
     // skill text comes from left
-    tl.from(skillTextRef.current, { x: -200, opacity: 0 }, "-=0.5");
+    tl.from(skillTextRef.current, { x: -120, opacity: 0 }, "-=0.4");
 
     // p subtext comes from left
-    tl.from(subTextRef.current, { x: -200, opacity: 0 }, "-=0.5");
+    tl.from(subTextRef.current, { x: -120, opacity: 0 }, "-=0.35");
 
     // buttons come from below
-    tl.from(buttonRef.current, { y: 50, opacity: 0, stagger: 0.2 }, "-=0.3");
+    tl.from(buttonRef.current, { y: 30, opacity: 0, stagger: 0.1 }, "-=0.3");
 
     // ── Scroll-triggered animations for sections below hero ──
 
@@ -93,81 +108,125 @@ const Intro = () => {
 
   return (
     <>
-      <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
-        {/* Big text */}
-        <div className="relative mt-1 flex flex-col items-center justify-center md:absolute md:inset-0 md:items-center">
-          <div className="relative text-center">
+      {/* ── Custom cursor (headings only) ── */}
+      <div
+        ref={cursorRef}
+        aria-hidden="true"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: onHeadings ? "72px" : "0px",
+          height: onHeadings ? "72px" : "0px",
+          borderRadius: "50%",
+          border: "1.5px solid var(--text-color)",
+          background: "transparent",
+          transform: "translate(-50%, -50%)",
+          pointerEvents: "none",
+          zIndex: 9999,
+          opacity: onHeadings ? 1 : 0,
+          transition: "width 0.35s cubic-bezier(0.23,1,0.32,1), height 0.35s cubic-bezier(0.23,1,0.32,1), opacity 0.25s ease",
+        }}
+      />
+      <section className="relative w-full min-h-screen flex items-center justify-center px-4 lg:px-8 overflow-hidden">
+        <div className="w-full max-w-[88vw] mx-auto flex flex-col md:flex-row items-center justify-center gap-[2vw]">
+          {/* ── Left Column – Text ── */}
+          <div className="w-full md:w-[50%] flex flex-col items-start text-left pl-0 md:pl-[2vw]">
             {/* Intro line */}
             <h3
               ref={introRef}
-              className="relative z-30 text-center text-[4.5vw] sm:text-2xl md:text-3xl lg:text-4xl font-[font4] text-(--text-color)/90 mt-0 sm:mt-0 md:mt-0 lg:mt-0 mb-40 leading-tight"
+              className="text-[4.5vw] sm:text-2xl md:text-2xl lg:text-[1.6vw] font-[font4] text-(--text-color)/90 mb-2 leading-tight"
             >
-              👋, My name is <span className="font-bold">Jobayer</span>{" "}
+              👋, My name is <span className="font-bold">Jobayer</span>
             </h3>
-            <div className="flex flex-col items-center gap-0 leading-none">
+
+            {/* Big headings – independent hover swap */}
+            <div className="flex flex-col items-start gap-0 leading-[0.9]">
+
+              {/* H1: default solid black → hover: outline only */}
               <h1
                 ref={(el) => (titleRef.current[0] = el)}
-                className="font-[font2] text-[11vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[12vw] cursor-pointer"
+                className="font-[font2] text-[14vw] md:text-[7vw] lg:text-[7.5vw] tracking-normal select-none"
+                style={{
+                  color: h1Hovered ? "transparent" : "var(--text-color)",
+                  WebkitTextStroke: h1Hovered ? "1.5px var(--text-color)" : "0px transparent",
+                  transition: "color 0.35s ease, -webkit-text-stroke-width 0.35s ease",
+                  cursor: "none",
+                }}
+                onMouseEnter={() => { setH1Hovered(true);  setOnHeadings(true);  }}
+                onMouseLeave={() => { setH1Hovered(false); setOnHeadings(false); }}
               >
                 Web Developer
               </h1>
+
+              {/* H2: default outline only → hover: solid black */}
               <h1
-                ref={(el) => (titleRef.current[1] = el)}
-                className="font-[font2] text-transparent text-[13vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[12vw] cursor-pointer"
-                style={{ WebkitTextStroke: "1.5px var(--text-color)" }}
+                className="font-[font2] text-[14vw] md:text-[7vw] lg:text-[7.5vw] tracking-normal select-none"
+                style={{
+                  color: h2Hovered ? "var(--text-color)" : "transparent",
+                  WebkitTextStroke: h2Hovered ? "0px transparent" : "1.5px var(--text-color)",
+                  transition: "color 0.35s ease, -webkit-text-stroke-width 0.35s ease",
+                  cursor: "none",
+                }}
+                onMouseEnter={() => { setH2Hovered(true);  setOnHeadings(true);  }}
+                onMouseLeave={() => { setH2Hovered(false); setOnHeadings(false); }}
               >
                 & UI Enthusiast
               </h1>
             </div>
-            <div className="mt-4 w-full flex justify-end pr-4 md:pr-8 lg:pr-12">
-              <p
-                ref={subTextRef}
-                className="inline-block px-12 py-2 text-right text-[2.8vw] sm:text-xl md:text-lg lg:text-[1.2vw] text-(--text-color)/65 font-[font4] tracking-wide"
-              >
-                Working freelance in Bangladesh
-              </p>
-            </div>
 
-            <div
-              ref={skillTextRef}
-              className="w-[27vw] px-4 sm:px-6 md:px-8 lg:px-12 -mt-10 hidden sm:flex md:flex justify-start"
-            >
-              <h4 className="text-left text-[4vw] sm:text-2xl md:text-3xl lg:text-[1.3vw] font-[font4]  text-(--text-color)/65 tracking-wide">
+            {/* Skill text */}
+            <div ref={skillTextRef} className="mt-2 hidden sm:block">
+              <h4 className="text-left text-[3.5vw] sm:text-xl md:text-lg lg:text-[1vw] font-[font4] text-(--text-color)/65 tracking-wide">
                 proficient in React, Node.js, Express.js, Next.js, MongoDB and
                 more.
               </h4>
             </div>
           </div>
-        </div>
 
-        <div className="flex flex-col-reverse md:flex-col items-center w-full">
-          {/* Image */}
-          <img
-            ref={imageRef}
-            src={image}
-            alt="Jobayer"
-            className="relative z-10  w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[24vw] h-auto"
-          />
-
-          {/* Buttons */}
-          <div
-            ref={buttonRef}
-            className="flex flex-col sm:flex-row gap-4 mt-2 z-20"
-          >
-            <a
-              href="#services"
-              className="text-sm md:text-base px-6 py-3 border rounded-md bg-(--text-color) text-white transition-all duration-300 hover:px-10 shadow-md"
+          {/* ── Right Column – Image + Info + Buttons ── */}
+          <div className="w-full md:w-[45%] flex flex-col items-center">
+            {/* Hero image with bottom gradient mask */}
+            <div
+              style={{
+                maskImage:
+                  "linear-gradient(to bottom, black 65%, transparent 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, black 65%, transparent 100%)",
+              }}
             >
-              Need a Developer?
-            </a>
+              <img
+                ref={imageRef}
+                src={image}
+                alt="Jobayer"
+                className="w-[70vw] sm:w-[50vw] md:w-full lg:w-[90%] h-auto object-cover object-top"
+              />
+            </div>
 
-            <a
-              target="_blank"
-              href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume@main/Jobayer_mahmud-resume.pdf?download=1"
-              className="text-center text-sm md:text-base px-6 py-3 border rounded-md bg-(--bg-color) text-(--text-color) transition-all duration-300 hover:px-10"
+            {/* Subtext */}
+            {/* <p
+              ref={subTextRef}
+              className="mt-2 text-center text-[2.8vw] sm:text-lg md:text-sm lg:text-[0.9vw] text-(--text-color)/65 font-[font4] tracking-wide"
             >
-              Resume
-            </a>
+              Working freelance in Bangladesh
+            </p> */}
+
+            {/* Buttons */}
+            <div ref={buttonRef} className="flex flex-row gap-3 mt-4">
+              <a
+                href="#services"
+                className="text-xs sm:text-sm md:text-sm px-5 py-2.5 border rounded-md bg-(--text-color) text-white transition-all duration-300 hover:px-8 shadow-md"
+              >
+                Hire Developer
+              </a>
+              <a
+                target="_blank"
+                href="https://cdn.jsdelivr.net/gh/jobayerm10/Jobayer-Mahmud-Resume@main/Jobayer_mahmud-resume.pdf?download=1"
+                className="text-center text-xs sm:text-sm md:text-sm px-5 py-2.5 border-2 rounded-md bg-transparent text-(--text-color) transition-all duration-300 hover:px-8"
+              >
+                Resume
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -183,14 +242,16 @@ const Intro = () => {
               creatives.
             </p>
           </div>
+        </div>
 
-          <div
-            ref={imageCardRef}
-            className="projects h-auto flex items-center justify-center mt-12"
-          >
-            <ImageCard />
-          </div>
+        <div
+          ref={imageCardRef}
+          className="projects w-full min-h-screen flex items-center justify-center mt-12"
+        >
+          <ImageCard />
+        </div>
 
+        <div className="mx-auto max-w-[90vw] pt-12 pb-0">
           <div ref={clientPriorityRef} className="mt-8">
             <ClientPriority />
           </div>
