@@ -34,3 +34,12 @@ body {
   font-family: font4;
   src: url(/fonts/61dda8ac2d6530d8d9434405_SFProDisplay-Light.otf);
 }
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

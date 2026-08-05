@@ -104,7 +104,7 @@ const Intro = () => {
               href="#services"
               className="text-sm md:text-base px-6 py-3 border rounded-md bg-(--text-color) text-white transition-all duration-300 hover:px-10 shadow-md"
             >
-              You need a developer
+              Need a Developer?
             </a>
 
             <a
