@@ -1,30 +1,26 @@
 import { useRef } from "react";
-import Image1 from "../assets/p1Img.png";
-import Image2 from "../assets/p2Img.png";
+import Image1 from "../assets/p7Img.png";
 import Image3 from "../assets/p3Img.png";
 import Image4 from "../assets/p4Img.png";
 import Image5 from "../assets/p5Img.png";
 import Image6 from "../assets/p6Img.png";
+import Image7 from "../assets/p7Img.png";
 
 const projects = [
   {
     img: Image1,
-    title: "VHS Entertainment",
-    subtitle: "Direction artistique et refonte du site sur Webflow",
+    title: "Local Fix",
+    subtitle: "Find trusted local services",
   },
-  {
-    img: Image2,
-    title: "Alexis Le Rossignol",
-    subtitle: "Portfolio et identité visuelle",
-  },
-  {
-    img: Image3,
-    title: "Kolecto",
-    subtitle: "Plateforme de gestion centralisée",
-  },
-  { img: Image4, title: "Projet 4", subtitle: "Description du projet 4" },
-  { img: Image5, title: "Projet 5", subtitle: "Description du projet 5" },
-  { img: Image6, title: "Projet 6", subtitle: "Description du projet 6" },
+  { img: Image3, title: "", subtitle: "Description du projet" },
+  { img: Image4, title: "", subtitle: "Description du projet" },
+  { img: Image5, title: "", subtitle: "Description du projet" },
+  { img: Image6, title: "", subtitle: "Description du projet" },
+  { img: Image7, title: "", subtitle: "Description du projet" },
+  { img: Image7, title: "", subtitle: "Description du projet" },
+  { img: Image7, title: "", subtitle: "Description du projet" },
+  { img: Image7, title: "", subtitle: "Description du projet" },
+  { img: Image7, title: "", subtitle: "Description du projet" },
 ];
 
 const ImageCard = () => {
@@ -112,7 +108,7 @@ const ImageCard = () => {
             {/* Background Image */}
             <img
               src={proj.img}
-              alt={proj.title}
+              alt={proj.title || `Project ${index + 1}`}
               className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
 

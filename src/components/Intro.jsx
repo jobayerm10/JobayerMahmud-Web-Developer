@@ -6,6 +6,7 @@ import image from "../assets/heroImg4.png";
 import { Footer } from "./Footer";
 import ImageCard from "./ImageCard";
 import ClientPriority from "./ServicesParts/ClientPriority";
+import ScrollingMarquee from "./ScrollingMarquee";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,14 +30,16 @@ const Intro = () => {
     const moveCursor = (e) => {
       if (!cursorRef.current) return;
       cursorRef.current.style.left = e.clientX + "px";
-      cursorRef.current.style.top  = e.clientY + "px";
+      cursorRef.current.style.top = e.clientY + "px";
     };
     window.addEventListener("mousemove", moveCursor);
     return () => window.removeEventListener("mousemove", moveCursor);
   }, []);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.55 } });
+    const tl = gsap.timeline({
+      defaults: { ease: "power3.out", duration: 0.55 },
+    });
     tl.delay(1.5);
 
     // Image comes from right
@@ -125,7 +128,8 @@ const Intro = () => {
           pointerEvents: "none",
           zIndex: 9999,
           opacity: onHeadings ? 1 : 0,
-          transition: "width 0.35s cubic-bezier(0.23,1,0.32,1), height 0.35s cubic-bezier(0.23,1,0.32,1), opacity 0.25s ease",
+          transition:
+            "width 0.35s cubic-bezier(0.23,1,0.32,1), height 0.35s cubic-bezier(0.23,1,0.32,1), opacity 0.25s ease",
         }}
       />
       <section className="relative w-full min-h-screen flex items-center justify-center px-4 lg:px-8 overflow-hidden">
@@ -142,19 +146,27 @@ const Intro = () => {
 
             {/* Big headings – independent hover swap */}
             <div className="flex flex-col items-start gap-0 leading-[0.9]">
-
               {/* H1: default solid black → hover: outline only */}
               <h1
                 ref={(el) => (titleRef.current[0] = el)}
                 className="font-[font2] text-[14vw] md:text-[7vw] lg:text-[7.5vw] tracking-normal select-none"
                 style={{
                   color: h1Hovered ? "transparent" : "var(--text-color)",
-                  WebkitTextStroke: h1Hovered ? "1.5px var(--text-color)" : "0px transparent",
-                  transition: "color 0.35s ease, -webkit-text-stroke-width 0.35s ease",
+                  WebkitTextStroke: h1Hovered
+                    ? "1.5px var(--text-color)"
+                    : "0px transparent",
+                  transition:
+                    "color 0.35s ease, -webkit-text-stroke-width 0.35s ease",
                   cursor: "none",
                 }}
-                onMouseEnter={() => { setH1Hovered(true);  setOnHeadings(true);  }}
-                onMouseLeave={() => { setH1Hovered(false); setOnHeadings(false); }}
+                onMouseEnter={() => {
+                  setH1Hovered(true);
+                  setOnHeadings(true);
+                }}
+                onMouseLeave={() => {
+                  setH1Hovered(false);
+                  setOnHeadings(false);
+                }}
               >
                 Web Developer
               </h1>
@@ -164,12 +176,21 @@ const Intro = () => {
                 className="font-[font2] text-[14vw] md:text-[7vw] lg:text-[7.5vw] tracking-normal select-none"
                 style={{
                   color: h2Hovered ? "var(--text-color)" : "transparent",
-                  WebkitTextStroke: h2Hovered ? "0px transparent" : "1.5px var(--text-color)",
-                  transition: "color 0.35s ease, -webkit-text-stroke-width 0.35s ease",
+                  WebkitTextStroke: h2Hovered
+                    ? "0px transparent"
+                    : "1.5px var(--text-color)",
+                  transition:
+                    "color 0.35s ease, -webkit-text-stroke-width 0.35s ease",
                   cursor: "none",
                 }}
-                onMouseEnter={() => { setH2Hovered(true);  setOnHeadings(true);  }}
-                onMouseLeave={() => { setH2Hovered(false); setOnHeadings(false); }}
+                onMouseEnter={() => {
+                  setH2Hovered(true);
+                  setOnHeadings(true);
+                }}
+                onMouseLeave={() => {
+                  setH2Hovered(false);
+                  setOnHeadings(false);
+                }}
               >
                 & UI Enthusiast
               </h1>
@@ -246,15 +267,17 @@ const Intro = () => {
 
         <div
           ref={imageCardRef}
-          className="projects w-full min-h-screen flex items-center justify-center mt-12"
+          className="projects w-full min-h-screen flex items-center justify-center mt-20"
         >
           <ImageCard />
         </div>
 
-        <div className="mx-auto max-w-[90vw] pt-12 pb-0">
-          <div ref={clientPriorityRef} className="mt-8">
-            <ClientPriority />
-          </div>
+        <div className="w-full h-full  mt-50">
+          <ScrollingMarquee />
+        </div>
+
+        <div ref={clientPriorityRef}>
+          <ClientPriority />
         </div>
 
         <div className="mt-0 w-full">

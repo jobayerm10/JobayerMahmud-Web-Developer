@@ -33,7 +33,7 @@ export const Footer = () => {
               <span>%</span>
             </div>
           </h1>
-          <div className="mt-6 bg-fuchsia-400">
+          <div className="">
             <SocialLinks />
           </div>
         </div>
