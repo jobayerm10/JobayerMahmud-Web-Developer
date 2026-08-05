@@ -24,10 +24,6 @@ const Navbar = () => {
               </li>
 
               <li className="relative font-[font4] text-(--text-color) text-sm sm:-text-[.7vw] md:text-[1vw] lg:text-[1vw] transition-transform duration-300 ease-out hover:-translate-y-1 cursor-pointer">
-                <NavLink to="/services">Services</NavLink>
-              </li>
-
-              <li className="relative font-[font4] text-(--text-color) text-sm sm:-text-[.7vw] md:text-[1vw] lg:text-[1vw] transition-transform duration-300 ease-out hover:-translate-y-1 cursor-pointer">
                 <NavLink to="/projects">Projects</NavLink>
               </li>
               <a

@@ -39,7 +39,7 @@ const MobileNav = ({ closeMenu }) => {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
+    { name: "Services", path: "#services" },
     { name: "Projects", path: "/projects" },
   ];
 
@@ -53,22 +53,37 @@ const MobileNav = ({ closeMenu }) => {
       </button>
 
       <div className="relative flex flex-col">
-        {menuItems.map((item, index) => (
-          <NavLink
-            key={item.name}
-            to={item.path}
-            onClick={handleClose}
-            className={`mobile-link flex justify-between items-center h-[12vh] px-6 text-[8vw] font-[font2] text-(--text-color)
-              ${
+        {menuItems.map((item, index) =>
+          item.path && item.path.startsWith("#") ? (
+            <a
+              key={item.name}
+              href={item.path}
+              onClick={handleClose}
+              className={`mobile-link flex justify-between items-center h-[12vh] px-6 text-[8vw] font-[font2] text-(--text-color) ${
                 index === menuItems.length - 1
                   ? "border-y-4 border-black"
                   : "border-t-4 border-black"
               }`}
-          >
-            <span>{item.name}</span>
-            <FaArrowCircleRight className="text-[8vw] mr-6" />
-          </NavLink>
-        ))}
+            >
+              <span>{item.name}</span>
+              <FaArrowCircleRight className="text-[8vw] mr-6" />
+            </a>
+          ) : (
+            <NavLink
+              key={item.name}
+              to={item.path}
+              onClick={handleClose}
+              className={`mobile-link flex justify-between items-center h-[12vh] px-6 text-[8vw] font-[font2] text-(--text-color) ${
+                index === menuItems.length - 1
+                  ? "border-y-4 border-black"
+                  : "border-t-4 border-black"
+              }`}
+            >
+              <span>{item.name}</span>
+              <FaArrowCircleRight className="text-[8vw] mr-6" />
+            </NavLink>
+          ),
+        )}
       </div>
 
       <div className="mt-auto h-1/2 mobile-link">
