@@ -4,6 +4,12 @@
 
 html {
   scrollbar-width: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 :root {
   --text-color: #1b1b19;

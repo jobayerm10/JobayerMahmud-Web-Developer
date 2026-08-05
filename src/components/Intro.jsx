@@ -53,13 +53,14 @@ const Intro = () => {
             <div className="flex flex-col items-center gap-0 leading-none">
               <h1
                 ref={(el) => (titleRef.current[0] = el)}
-                className="font-[font2] text-(--text-color) text-[13vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[12vw] cursor-pointer"
+                className="font-[font2] text-[11vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[12vw] cursor-pointer"
               >
                 Web Developer
               </h1>
               <h1
                 ref={(el) => (titleRef.current[1] = el)}
-                className="font-[font2] text-(--text-color) text-[13vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[12vw] cursor-pointer"
+                className="font-[font2] text-transparent text-[13vw] tracking-normal lg:tracking-normal sm:text-[14vw] md:text-[16vw] lg:text-[12vw] cursor-pointer"
+                style={{ WebkitTextStroke: "1.5px var(--text-color)" }}
               >
                 & UI Enthusiast
               </h1>
@@ -67,17 +68,17 @@ const Intro = () => {
             <div className="mt-4 w-full flex justify-end pr-4 md:pr-8 lg:pr-12">
               <p
                 ref={subTextRef}
-                className="inline-block px-4 py-2 text-right text-md sm:text-xl md:text-lg lg:text-[1.2vw] text-(--text-color)/65 font-[font2] tracking-wide"
+                className="inline-block px-12 py-2 text-right text-[2.8vw] sm:text-xl md:text-lg lg:text-[1.2vw] text-(--text-color)/65 font-[font4] tracking-wide"
               >
-                Based in Rajshahi, Bangladesh
+                Working freelance in Bangladesh
               </p>
             </div>
 
             <div
               ref={skillTextRef}
-              className="w-[27vw] px-4 sm:px-6 md:px-8 lg:px-12 -mt-10 flex justify-start"
+              className="w-[27vw] px-4 sm:px-6 md:px-8 lg:px-12 -mt-10 hidden sm:flex md:flex justify-start"
             >
-              <h4 className="text-left text-[4vw] sm:text-2xl md:text-3xl lg:text-[1.3vw] font-[font2]  text-(--text-color)/65 tracking-wide">
+              <h4 className="text-left text-[4vw] sm:text-2xl md:text-3xl lg:text-[1.3vw] font-[font4]  text-(--text-color)/65 tracking-wide">
                 proficient in React, Node.js, Express.js, Next.js, MongoDB and
                 more.
               </h4>
@@ -117,11 +118,8 @@ const Intro = () => {
         </div>
       </section>
 
-      <section
-        id="services"
-        className="w-full bg-(--bg-color) text-(--text-color)"
-      >
-        <div className="mx-auto max-w-[90vw] py-20">
+      <section id="services" className="w-full text-(--text-color)">
+        <div className="mx-auto max-w-[90vw] pt-20 pb-0">
           <div className="mx-auto max-w-[70vw] text-center">
             <p className="text-center text-[5.4vw] lg:text-[4.2vw] font-[font2]">
               Impactful branding and high-end <br /> productive websites for
@@ -136,10 +134,10 @@ const Intro = () => {
           <div className="mt-8">
             <ClientPriority />
           </div>
+        </div>
 
-          <div className="mt-12">
-            <Footer />
-          </div>
+        <div className="mt-0 w-full">
+          <Footer />
         </div>
       </section>
     </>
