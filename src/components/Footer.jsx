@@ -28,9 +28,8 @@ export const Footer = () => {
             </div>
             <div>
               <span>LIKE </span>
-              <span>%</span>
+
               <span className="text-(--text-color)">You</span>
-              <span>%</span>
             </div>
           </h1>
           <div className="">

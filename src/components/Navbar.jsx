@@ -1,18 +1,20 @@
 import { NavLink } from "react-router-dom";
 import MobileNav from "../Navigation/MobileNav";
-import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const Navbar = ({ menuOpen: externalMenuOpen, setMenuOpen: externalSetMenuOpen }) => {
+  const [internalMenuOpen, setInternalMenuOpen] = useState(false);
+  const menuOpen = externalMenuOpen !== undefined ? externalMenuOpen : internalMenuOpen;
+  const setMenuOpen = externalSetMenuOpen || setInternalMenuOpen;
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-(--text-bg)   ">
+    <header className={`fixed top-0 left-0 w-full z-50 bg-(--text-bg) ${menuOpen ? "hidden" : "block"}`}>
       <div className="max-w-full mx-5 lg:mx-14">
         <div className="flex justify-between items-center mt-5 sm: lg:mt-1">
           <NavLink
             to="/"
-            className="text-[10vw] lg:text-[3vw] font-[font2]  text-(--text-color) cursor-pointer"
+            className="text-[10vw] lg:text-[3vw] font-[font2] text-(--text-color) cursor-pointer"
           >
             Jobayer
           </NavLink>
@@ -29,8 +31,7 @@ const Navbar = () => {
               <a
                 target="_blank"
                 href="mailto:jobayermahmud976@gmail.com"
-                className="sm:-text-[.7vw] md:text-[1vw] lg:text-[1vw] font-[font4] px-6 py-3  border-2 rounded-md bg-(--text-color) text-(--text-bg) transition-all duration-300 ease-out hover:px-9 shadow-md hover:shadow-lg
-     "
+                className="sm:-text-[.7vw] md:text-[1vw] lg:text-[1vw] font-[font4] px-6 py-3 border-2 rounded-md bg-(--text-color) text-(--text-bg) transition-all duration-300 ease-out hover:px-9 shadow-md hover:shadow-lg"
               >
                 @jobayer
               </a>

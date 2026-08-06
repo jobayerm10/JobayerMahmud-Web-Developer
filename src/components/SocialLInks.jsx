@@ -20,14 +20,14 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className=" flex flex-col gap-5 justify-between mt-10">
+    <div className="flex flex-row gap-6 justify-center items-center mt-2">
       {links.map((link) => (
         <a
           key={link.label}
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-3xl"
+          className="text-3xl text-(--text-color) hover:opacity-75 transition-opacity"
           aria-label={link.label}
         >
           {link.icon}
