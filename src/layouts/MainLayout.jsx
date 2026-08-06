@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { createPortal } from "react-dom";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 
@@ -7,7 +8,10 @@ const MainLayout = () => {
 
   return (
     <div>
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}></Navbar>
+      {createPortal(
+        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />,
+        document.body,
+      )}
       <div className={menuOpen ? "hidden" : "block"}>
         <Outlet></Outlet>
       </div>
