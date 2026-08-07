@@ -59,7 +59,7 @@ const MobileNav = ({ closeMenu }) => {
   return createPortal(
     <div
       ref={menuRef}
-      className="fixed inset-0 top-0 left-0 w-screen h-screen min-h-screen z-[999999] bg-(--text-bg) flex flex-col justify-between p-6 sm:p-8 overflow-y-auto"
+      className="fixed inset-0 top-0 left-0 w-screen h-screen min-h-screen z-999999 bg-(--text-bg) flex flex-col p-6 sm:p-8 overflow-y-auto"
       style={{
         position: "fixed",
         top: 0,
@@ -93,7 +93,7 @@ const MobileNav = ({ closeMenu }) => {
       </div>
 
       {/* Menu Links */}
-      <div className="relative flex flex-col my-auto py-2">
+      <div className="relative flex flex-col py-2">
         {menuItems.map((item, index) =>
           item.path && item.path.startsWith("#") ? (
             <a
@@ -114,7 +114,7 @@ const MobileNav = ({ closeMenu }) => {
               key={item.name}
               to={item.path}
               onClick={handleClose}
-              className={`mobile-link flex justify-between items-center py-5 px-4 text-[9vw] sm:text-4xl font-[font2] text-(--text-color) ${
+              className={`mobile-link flex justify-between items-center py-2 px-4 text-[9vw] sm:text-4xl font-[font2] text-(--text-color) ${
                 index === menuItems.length - 1
                   ? "border-y-2 border-(--text-color)"
                   : "border-t-2 border-(--text-color)"
@@ -128,7 +128,7 @@ const MobileNav = ({ closeMenu }) => {
       </div>
 
       {/* Social Section */}
-      <div className="mobile-link pt-2 pb-4">
+      <div className="mobile-link mt-auto pt-2 pb-4">
         <SocialMenu />
       </div>
     </div>,

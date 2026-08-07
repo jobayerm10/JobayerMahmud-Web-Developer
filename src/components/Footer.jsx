@@ -41,7 +41,7 @@ export const Footer = () => {
           <a
             target="_blank"
             href=""
-            className="text-[3vw] lg:text-[.9vw] px-8 py-3 rounded-md border-4 bg-(--text-bg) text-(--text-color) transition-all duration-300 ease-out hover:px-12 shadow-md hover:shadow-lg"
+            className="text-[3vw] lg:text-[.9vw] font-semibold px-8 py-3 rounded-md border-2 bg-(--text-bg) text-(--text-color) transition-all duration-300 ease-out hover:px-12 shadow-md hover:shadow-lg"
           >
             Start a project
           </a>
